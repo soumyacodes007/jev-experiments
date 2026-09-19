@@ -25,14 +25,14 @@ export default function Home() {
   }
 
   function onKeyDown(event: KeyboardEvent<HTMLTextAreaElement>) {
-    if (event.key === "Enter" && !event.shiftKey) {
+    if (event.key === "Enter" && (event.metaKey || event.ctrlKey)) {
       event.preventDefault();
       send();
     }
   }
 
   return (
-    <main className="flex min-h-screen flex-col bg-background">
+    <main className="flex h-screen flex-col bg-background">
       <header className="flex justify-center py-4">
         <ToggleGroup
           type="single"
@@ -52,31 +52,28 @@ export default function Home() {
         </ToggleGroup>
       </header>
 
-      <div className="flex flex-1 items-center justify-center px-4">
+      <div className="grid min-h-0 flex-1 grid-cols-2 gap-6 px-6 pb-6">
         <form
           onSubmit={send}
-          className="relative w-full max-w-xl rounded-2xl border bg-background shadow-xs transition-[color,box-shadow] focus-within:border-ring focus-within:ring-[3px] focus-within:ring-ring/50"
+          className="flex min-h-0 flex-col overflow-hidden rounded-xl border bg-background shadow-xs transition-[color,box-shadow] focus-within:border-ring focus-within:ring-[3px] focus-within:ring-ring/50"
         >
           <Textarea
             value={draft}
             onChange={(event) => setDraft(event.target.value)}
             onKeyDown={onKeyDown}
             placeholder={PLACEHOLDER[mode]}
-            rows={1}
-            className="max-h-48 min-h-[56px] resize-none border-0 bg-transparent px-4 py-4 pr-14 shadow-none focus-visible:border-0 focus-visible:ring-0"
+            className="min-h-0 flex-1 resize-none rounded-none border-0 bg-transparent px-5 py-4 text-sm shadow-none focus-visible:border-0 focus-visible:ring-0"
           />
-          <div className="absolute bottom-2.5 right-2.5">
-            <Button
-              type="submit"
-              size="icon"
-              className="size-8 rounded-full"
-              disabled={!draft.trim()}
-              aria-label="Send"
-            >
-              <ArrowUp className="size-4" />
+          <div className="flex items-center justify-between border-t px-4 py-3">
+            <span className="text-[11px] text-muted-foreground">⌘/Ctrl + Enter to send</span>
+            <Button type="submit" size="sm" className="gap-1.5" disabled={!draft.trim()}>
+              Send
+              <ArrowUp className="size-3.5" />
             </Button>
           </div>
         </form>
+
+        <div />
       </div>
     </main>
   );
