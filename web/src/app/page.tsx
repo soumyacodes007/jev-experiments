@@ -128,7 +128,7 @@ export default function Home() {
           <ToggleGroup
             type="single"
             value={mode}
-            onValueChange={(value) => { if (value) { setMode(value as Mode); reset(); } }}
+            onValueChange={(value) => { if (value) { setMode(value as Mode); setDraft(""); reset(); } }}
             variant="outline"
             size="sm"
           >
