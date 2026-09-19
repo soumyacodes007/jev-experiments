@@ -27,7 +27,10 @@
     "prism:test": "node --test \"prism/test/*.test.mjs\"",
     "prism:eval": "node prism/evals/prism-evaluate.mjs",
     "prism:serve": "node prism/src/cli.mjs serve",
-    "prism:mask": "node prism/src/cli.mjs mask"
+    "prism:mask": "node prism/src/cli.mjs mask",
+    "web:dev": "npm --prefix web run dev",
+    "web:build": "npm --prefix web run build",
+    "web:start": "npm --prefix web run start"
   },
   "dependencies": {},
   "devDependencies": {}
