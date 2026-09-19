@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "PRISM — Keep the meaning. Remove the exposure.",
-  description: "Semantic sensitive-data detection with deterministic masking.",
+  title: "Jev Console",
+  description: "HALO security classification and PRISM sensitive-data masking, powered by Jev.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
