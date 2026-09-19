@@ -205,10 +205,10 @@ export default function Home() {
                     <span className="text-[11px] text-muted-foreground">{prism.meta.latency_ms}ms · {prism.meta.profile ?? "economy"}</span>
                   )}
                 </div>
-                <div className="min-h-0 flex-1 overflow-y-auto p-4">
-                  {error ? <Muted className="text-red-600">{error}</Muted>
-                    : loading ? <Muted>Running PRISM…</Muted>
-                    : !prism ? <Muted>Send text to see the marked output.</Muted>
+                <div className="flex min-h-0 flex-1 flex-col">
+                  {error ? <div className="p-4"><Muted className="text-red-600">{error}</Muted></div>
+                    : loading ? <div className="p-4"><Muted>Running PRISM…</Muted></div>
+                    : !prism ? <div className="p-4"><Muted>Send text to see the marked output.</Muted></div>
                     : <PrismOutput result={prism} original={draft} />}
                 </div>
               </div>
@@ -317,11 +317,14 @@ function PrismOutput({ result, original }: { result: PrismResult; original: stri
   if (cursor < original.length) pieces.push(<span key="t-end">{original.slice(cursor)}</span>);
 
   return (
-    <div className="flex flex-col gap-3 text-sm">
-      <p className="leading-relaxed whitespace-pre-wrap">{pieces}</p>
-      <div>
-        <p className="mb-1.5 text-[11px] text-muted-foreground">Masked version</p>
-        <p className="rounded-md bg-secondary/60 p-2.5 font-mono text-xs leading-relaxed whitespace-pre-wrap">{result.masked_text ?? original}</p>
+    <div className="flex min-h-0 flex-1 flex-col">
+      <div className="min-h-0 flex-1 overflow-y-auto p-4">
+        <p className="mb-2 text-[11px] text-muted-foreground">Marked</p>
+        <p className="text-sm leading-relaxed whitespace-pre-wrap">{pieces}</p>
+      </div>
+      <div className="min-h-0 flex-1 overflow-y-auto border-t bg-secondary/30 p-4">
+        <p className="mb-2 text-[11px] text-muted-foreground">Masked</p>
+        <p className="font-mono text-lg font-semibold leading-relaxed whitespace-pre-wrap">{result.masked_text ?? original}</p>
       </div>
     </div>
   );
