@@ -1,9 +1,14 @@
 {
-  "name": "halo",
+  "name": "jev-experiments",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Real-time security classification layer for AI agents, built on Jev (TypeSafe System One).",
+  "description": "Two Jev (TypeSafe System One) experiments: halo/ (agent security classification) and prism/ (sensitive-data detection + masking).",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soumyacodes007/jev-experiments.git"
+  },
   "engines": {
     "node": ">=22"
   },
