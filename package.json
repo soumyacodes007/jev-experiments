@@ -1,0 +1,27 @@
+{
+  "name": "halo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Real-time security classification layer for AI agents, built on Jev (TypeSafe System One).",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.mjs\"",
+    "prism:test": "node --test \"prism/test/*.test.mjs\"",
+    "prism:eval": "node prism/evals/prism-evaluate.mjs",
+    "prism:serve": "node prism/src/cli.mjs serve",
+    "prism:mask": "node prism/src/cli.mjs mask",
+    "eval": "node evals/run.mjs",
+    "eval:dev": "node evals/run.mjs --split dev",
+    "eval:holdout": "node evals/run.mjs --split holdout",
+    "eval:sealed": "node evals/sealed.mjs",
+    "eval:consistency": "node evals/consistency.mjs",
+    "redteam": "node evals/redteam.mjs",
+    "replay": "node evals/replay.mjs",
+    "serve": "node src/server.js"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
