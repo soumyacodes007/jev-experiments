@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent, type KeyboardEvent, type ReactNode } from "react";
 import { ArrowUp, Loader2 } from "lucide-react";
-import { Bar, BarChart, Cell, LabelList, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, Cell, XAxis, YAxis } from "recharts";
 
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Button } from "@/components/ui/button";
@@ -227,23 +227,12 @@ function Muted({ children, className }: { children: ReactNode; className?: strin
   return <p className={cn("text-sm text-muted-foreground", className)}>{children}</p>;
 }
 
-function prettySignal(key: string) {
-  return key.replace(/^sig_/, "").replace(/_/g, " ");
-}
-
 function HaloChart({ result }: { result: HaloResult }) {
   const unsafe = result.safety === "UNSAFE";
-  const barColor = unsafe ? "#ef4444" : "#10b981";
-  const signals = result._envelope?.signals ?? {};
-  const data = Object.entries(signals)
-    .map(([key, value]) => ({ name: prettySignal(key), value: Math.round(value * 100) }))
-    .filter((d) => d.value >= 15)
-    .sort((a, b) => b.value - a.value)
-    .slice(0, 6);
-  const rules = result._envelope?.decision?.matched_rules ?? [];
+  const confidence = Math.round((result.confidence ?? 0) * 100);
 
   return (
-    <div className="flex h-full flex-col">
+    <div className="flex h-full flex-col justify-center gap-5">
       <div className="flex flex-wrap items-center gap-2">
         <span className={cn("rounded-md px-2.5 py-1 text-xs font-semibold", unsafe ? "bg-red-100 text-red-700" : "bg-emerald-100 text-emerald-700")}>
           {result.safety ?? "—"}
@@ -251,29 +240,31 @@ function HaloChart({ result }: { result: HaloResult }) {
         {result.tier && (
           <span className={cn("rounded-md px-2.5 py-1 text-xs font-medium", TIER_COLOR[result.tier] ?? "bg-secondary text-secondary-foreground")}>{result.tier}</span>
         )}
-        <span className="font-mono text-xs text-muted-foreground">{result.subcategory ?? "—"}</span>
       </div>
 
-      <p className="mt-3 mb-1 text-[11px] text-muted-foreground">Why — strongest risk signals</p>
-      <div className="min-h-0 flex-1">
-        {data.length === 0 ? (
-          <Muted className="text-xs">No strong signals fired.</Muted>
-        ) : (
-          <ChartContainer>
-            <BarChart data={data} layout="vertical" margin={{ left: 4, right: 28, top: 2, bottom: 2 }} barCategoryGap={6}>
-              <XAxis type="number" domain={[0, 100]} hide />
-              <YAxis type="category" dataKey="name" width={116} tickLine={false} axisLine={false} tick={{ fontSize: 11 }} />
-              <Bar dataKey="value" radius={4} fill={barColor} isAnimationActive={false}>
-                <LabelList dataKey="value" position="right" formatter={(v: number) => `${v}%`} className="fill-muted-foreground" fontSize={10} />
-              </Bar>
-            </BarChart>
-          </ChartContainer>
-        )}
+      <div className="grid gap-3">
+        <Row label="Category" value={result.category ?? "—"} mono />
+        <Row label="Subcategory" value={result.subcategory ?? "—"} mono />
       </div>
 
-      {rules.length > 0 && (
-        <p className="mt-2 text-[11px] text-muted-foreground">Rules: <span className="font-mono">{rules.join(", ")}</span></p>
-      )}
+      <div>
+        <div className="mb-1 flex items-center justify-between text-xs text-muted-foreground">
+          <span>Confidence</span>
+          <span>{confidence}%</span>
+        </div>
+        <div className="h-1.5 w-full overflow-hidden rounded-full bg-secondary">
+          <div className={cn("h-full rounded-full", unsafe ? "bg-red-500" : "bg-emerald-500")} style={{ width: `${confidence}%` }} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Row({ label, value, mono }: { label: string; value: string; mono?: boolean }) {
+  return (
+    <div className="flex items-center justify-between gap-4">
+      <span className="text-xs text-muted-foreground">{label}</span>
+      <span className={cn("text-xs font-medium", mono && "font-mono")}>{value}</span>
     </div>
   );
 }
