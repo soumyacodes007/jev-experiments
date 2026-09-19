@@ -41,20 +41,20 @@ Per-call server round-trip for one full classification (whole taxonomy in a sing
 
 | p50 | p90 | p95 | p99 | mean | min | max |
 |---|---|---|---|---|---|---|
-| 388ms | 453ms | 529ms | 1766ms | 428ms | 333ms | 1861ms |
+| 390ms | 452ms | 472ms | 1430ms | 425ms | 334ms | 2329ms |
 
 Distribution:
 
 ```
-≤400ms  ██████████████████████████████ 66
-≤700ms  ████████████████░░░░░░░░░░░░░░ 35
+≤400ms  ██████████████████████████████ 64
+≤700ms  █████████████████░░░░░░░░░░░░░ 37
 ≤1.0s   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1
-≤1.5s   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0
-≤2.5s   █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2
+≤1.5s   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1
+≤2.5s   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1
 >2.5s   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0
 ```
 
-The tail (>1s) is cold-connection and occasional upstream variance, not the steady state; warm p50 is **~388ms**. Adding questions to the request does not move this — the whole taxonomy is priced as one parallel call (see §5).
+The tail (>1s) is cold-connection and occasional upstream variance, not the steady state; warm p50 is **~390ms**. Adding questions to the request does not move this — the whole taxonomy is priced as one parallel call (see §5).
 
 ## 4. Token usage
 
@@ -87,8 +87,8 @@ Questions asked per request ranged **17–25** (content + action + context signa
 
 | approach | API round-trips per event | p50 latency |
 |---|---|---|
-| HALO: one parallel call | 1 | ~388ms |
-| naive cascade (illustrative) | ~10–15 | ~3880ms+ |
+| HALO: one parallel call | 1 | ~390ms |
+| naive cascade (illustrative) | ~10–15 | ~3900ms+ |
 
 ## 6. Cost
 
