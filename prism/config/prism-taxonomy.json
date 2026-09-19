@@ -1,0 +1,85 @@
+{
+  "name": "PRISM",
+  "version": "1.0.0",
+  "description": "Sensitive-data taxonomy covering identity, credentials, financial data, health data, and digital identifiers.",
+  "category_precedence": [
+    "CREDENTIAL",
+    "FINANCIAL",
+    "IDENTITY",
+    "HEALTH",
+    "DIGITAL"
+  ],
+  "none_label": "NONE",
+  "masking": {
+    "default_mode": "full_replacement",
+    "placeholder_format": "[{subtype}]",
+    "uncertain_placeholder": "[SENSITIVE]"
+  },
+  "categories": {
+    "IDENTITY": {
+      "description": "A value that identifies, locates, or enables contact with a natural person. Do not classify a generic mention of an identity field when no actual value is present.",
+      "subtypes": {
+        "PERSON_NAME": "An actual person's name or identifying alias in context; exclude organization and product names.",
+        "EMAIL": "An actual email address or mailbox value.",
+        "PHONE": "An actual telephone or fax number.",
+        "ADDRESS": "An actual physical, residential, mailing, or delivery address.",
+        "DATE_OF_BIRTH": "A person's date of birth; exclude unrelated dates.",
+        "PASSPORT": "An actual passport number or passport identifier.",
+        "DRIVER_LICENSE": "An actual driver-license number or identifier.",
+        "GOVERNMENT_ID": "A government-issued personal identifier not covered by PASSPORT, DRIVER_LICENSE, or TAX_ID. Includes social-security numbers (SSN), national identity numbers, and comparable civil identity identifiers.",
+        "TAX_ID": "An identifier explicitly issued or used for taxation, such as a TIN, EIN, or tax-registration number. Do not use TAX_ID for an SSN or national identity number merely because it may also appear in tax records."
+      }
+    },
+    "CREDENTIAL": {
+      "description": "A value that authenticates, authorizes, signs, or grants access. Prefer CREDENTIAL over IDENTITY or DIGITAL when the value can grant access.",
+      "subtypes": {
+        "API_KEY": "A secret key used to authenticate API requests.",
+        "PASSWORD": "An actual password or passphrase value; exclude the word 'password' and password-policy discussion.",
+        "ACCESS_TOKEN": "A bearer or access token that grants access; use JWT when the value is recognizably a JSON Web Token.",
+        "REFRESH_TOKEN": "A token specifically used to obtain new access tokens.",
+        "SESSION_TOKEN": "A session identifier or cookie value that grants authenticated access.",
+        "JWT": "An actual JSON Web Token value.",
+        "PRIVATE_KEY": "A cryptographic private key not more specifically classified as SSH_PRIVATE_KEY.",
+        "SSH_PRIVATE_KEY": "An SSH private key or complete SSH private-key block.",
+        "DATABASE_CREDENTIAL": "A database username, password, or credential pair when it is not part of a complete connection string.",
+        "CONNECTION_STRING": "A complete database or service connection string, especially one embedding a username, password, token, host, or account identifier. Prefer this whole span over its credential components."
+      }
+    },
+    "FINANCIAL": {
+      "description": "A value used to access, route, or identify payment and banking activity.",
+      "subtypes": {
+        "CREDIT_CARD": "An actual payment-card number; exclude a generic reference to a card.",
+        "CVV": "An actual payment-card verification or security code.",
+        "BANK_ACCOUNT": "An actual bank-account number that is not better represented as IBAN.",
+        "ROUTING_NUMBER": "An actual domestic bank-routing or clearing number.",
+        "IBAN": "An actual International Bank Account Number.",
+        "SWIFT_BIC": "An actual SWIFT or Bank Identifier Code.",
+        "DIGITAL_PAYMENT_ID": "An actual payment handle, wallet payment identifier, or payment-network identifier not covered by the other financial types."
+      }
+    },
+    "HEALTH": {
+      "description": "A value containing a person's health identifier or sensitive health information. A health fact may be sensitive even when it is not independently identifying.",
+      "subtypes": {
+        "MEDICAL_RECORD_ID": "An actual medical-record, patient-record, or chart identifier.",
+        "HEALTH_PLAN_ID": "An actual health-plan, insurance-member, or beneficiary identifier.",
+        "HEALTHCARE_PROVIDER_ID": "An actual identifier assigned to a healthcare provider or practitioner.",
+        "DIAGNOSIS": "A diagnosis, diagnosed condition, or diagnostic conclusion tied to a person or patient context.",
+        "MEDICATION": "A medication, prescription, dosage, or medication regimen tied to a person or patient context.",
+        "PROCEDURE": "A medical procedure, treatment, test, or intervention tied to a person or patient context.",
+        "MEDICAL_HISTORY": "A statement or span describing a person's medical history that is broader than a single diagnosis, medication, or procedure."
+      }
+    },
+    "DIGITAL": {
+      "description": "A digital, network, account, or device identifier that does not itself grant access. Prefer CREDENTIAL when the value authenticates or authorizes.",
+      "subtypes": {
+        "IP_ADDRESS": "An actual IPv4 or IPv6 address.",
+        "MAC_ADDRESS": "An actual network-interface MAC address.",
+        "DEVICE_ID": "An actual device identifier not more specifically classified as IMEI or MAC_ADDRESS.",
+        "IMEI": "An actual International Mobile Equipment Identity value.",
+        "USERNAME": "An actual username or login name that does not itself contain a secret.",
+        "ACCOUNT_ID": "An actual application, customer, tenant, or platform account identifier that is not a bank account.",
+        "URL": "A URL that is sensitive because it is private, internal, identifying, or contains sensitive path/query data. Exclude ordinary public URLs."
+      }
+    }
+  }
+}
