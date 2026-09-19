@@ -123,19 +123,21 @@ export default function Home() {
 
   return (
     <main className="flex h-screen flex-col bg-background">
-      <header className="flex flex-wrap items-center gap-3 px-6 pt-4 pb-3">
-        <ToggleGroup
-          type="single"
-          value={mode}
-          onValueChange={(value) => { if (value) { setMode(value as Mode); reset(); } }}
-          variant="outline"
-          size="sm"
-        >
-          <ToggleGroupItem value="halo" className="px-5 text-xs font-medium tracking-wide">HALO</ToggleGroupItem>
-          <ToggleGroupItem value="prism" className="px-5 text-xs font-medium tracking-wide">PRISM</ToggleGroupItem>
-        </ToggleGroup>
+      <header className="flex flex-col gap-3 pt-4 pb-3">
+        <div className="flex justify-center">
+          <ToggleGroup
+            type="single"
+            value={mode}
+            onValueChange={(value) => { if (value) { setMode(value as Mode); reset(); } }}
+            variant="outline"
+            size="sm"
+          >
+            <ToggleGroupItem value="halo" className="px-5 text-xs font-medium tracking-wide">HALO</ToggleGroupItem>
+            <ToggleGroupItem value="prism" className="px-5 text-xs font-medium tracking-wide">PRISM</ToggleGroupItem>
+          </ToggleGroup>
+        </div>
 
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2 px-6">
           {EXAMPLES[mode].map((example) => (
             <button
               key={example.label}
@@ -171,24 +173,41 @@ export default function Home() {
         </form>
 
         {/* RIGHT: output */}
-        <div className="flex min-h-0 flex-col gap-4">
+        <div className="flex min-h-0 flex-col gap-4 self-center">
           {mode === "halo" ? (
-            <div className={cn("rounded-xl border p-4", BOX_H)}>
-              {error ? <Muted className="text-red-600">{error}</Muted>
-                : loading ? <Muted>Running HALO…</Muted>
-                : !halo ? <Muted>Send an action to see the verdict.</Muted>
-                : <HaloChart result={halo} />}
+            <div className={cn("flex flex-col overflow-hidden rounded-xl border bg-card shadow-xs", BOX_H)}>
+              <div className="flex items-center justify-between border-b bg-muted/30 px-4 py-2.5">
+                <span className="text-xs font-medium">Verdict</span>
+                <span className="text-[11px] text-muted-foreground">HALO</span>
+              </div>
+              <div className="min-h-0 flex-1 p-4">
+                {error ? <Muted className="text-red-600">{error}</Muted>
+                  : loading ? <Muted>Running HALO…</Muted>
+                  : !halo ? <Muted>Send an action to see the verdict.</Muted>
+                  : <HaloChart result={halo} />}
+              </div>
             </div>
           ) : (
             <>
-              <div className={cn("overflow-y-auto rounded-xl border p-4", BOX_H)}>
-                {error ? <Muted className="text-red-600">{error}</Muted>
-                  : loading ? <Muted>Running PRISM…</Muted>
-                  : !prism ? <Muted>Send text to see the marked output.</Muted>
-                  : <PrismOutput result={prism} original={draft} />}
+              <div className={cn("flex flex-col overflow-hidden rounded-xl border bg-card shadow-xs", BOX_H)}>
+                <div className="flex items-center justify-between border-b bg-muted/30 px-4 py-2.5">
+                  <span className="text-xs font-medium">Marked output</span>
+                  {prism?.meta?.latency_ms != null && (
+                    <span className="text-[11px] text-muted-foreground">{prism.meta.latency_ms}ms · {prism.meta.profile ?? "economy"}</span>
+                  )}
+                </div>
+                <div className="min-h-0 flex-1 overflow-y-auto p-4">
+                  {error ? <Muted className="text-red-600">{error}</Muted>
+                    : loading ? <Muted>Running PRISM…</Muted>
+                    : !prism ? <Muted>Send text to see the marked output.</Muted>
+                    : <PrismOutput result={prism} original={draft} />}
+                </div>
               </div>
-              <div className="h-[16vh] rounded-xl border p-3">
-                {prism && !error && !loading ? <PrismChart detections={prism.detections ?? []} /> : <Muted className="text-[11px]">Category breakdown</Muted>}
+              <div className="flex h-[16vh] flex-col overflow-hidden rounded-xl border bg-card shadow-xs">
+                <div className="border-b bg-muted/30 px-4 py-2 text-xs font-medium">Category breakdown</div>
+                <div className="min-h-0 flex-1 p-3">
+                  {prism && !error && !loading ? <PrismChart detections={prism.detections ?? []} /> : <Muted className="text-[11px]">Marked categories appear here.</Muted>}
+                </div>
               </div>
             </>
           )}
@@ -283,10 +302,7 @@ function PrismOutput({ result, original }: { result: PrismResult; original: stri
 
   return (
     <div className="flex flex-col gap-3 text-sm">
-      <div>
-        <p className="mb-1.5 text-[11px] text-muted-foreground">Marked output</p>
-        <p className="leading-relaxed whitespace-pre-wrap">{pieces}</p>
-      </div>
+      <p className="leading-relaxed whitespace-pre-wrap">{pieces}</p>
       <div>
         <p className="mb-1.5 text-[11px] text-muted-foreground">Masked version</p>
         <p className="rounded-md bg-secondary/60 p-2.5 font-mono text-xs leading-relaxed whitespace-pre-wrap">{result.masked_text ?? original}</p>
