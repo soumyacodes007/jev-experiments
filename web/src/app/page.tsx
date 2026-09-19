@@ -52,10 +52,10 @@ export default function Home() {
         </ToggleGroup>
       </header>
 
-      <div className="grid min-h-0 flex-1 grid-cols-2 gap-6 px-6 pb-6">
+      <div className="grid min-h-0 flex-1 grid-cols-2 items-center gap-6 px-6 pb-6">
         <form
           onSubmit={send}
-          className="flex min-h-0 flex-col overflow-hidden rounded-xl border bg-background shadow-xs transition-[color,box-shadow] focus-within:border-ring focus-within:ring-[3px] focus-within:ring-ring/50"
+          className="flex h-[62vh] min-h-0 flex-col overflow-hidden rounded-xl border bg-background shadow-xs transition-[color,box-shadow] focus-within:border-ring focus-within:ring-[3px] focus-within:ring-ring/50"
         >
           <Textarea
             value={draft}
