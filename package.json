@@ -8,19 +8,21 @@
     "node": ">=22"
   },
   "scripts": {
-    "test": "node --test \"test/*.test.mjs\"",
+    "test": "node --test \"halo/test/*.test.mjs\" \"prism/test/*.test.mjs\"",
+    "halo:test": "node --test \"halo/test/*.test.mjs\"",
+    "halo:eval": "node halo/evals/run.mjs",
+    "halo:eval:dev": "node halo/evals/run.mjs --split dev",
+    "halo:eval:holdout": "node halo/evals/run.mjs --split holdout",
+    "halo:eval:sealed": "node halo/evals/sealed.mjs",
+    "halo:eval:consistency": "node halo/evals/consistency.mjs",
+    "halo:redteam": "node halo/evals/redteam.mjs",
+    "halo:replay": "node halo/evals/replay.mjs",
+    "halo:report": "node halo/evals/report.mjs",
+    "halo:serve": "node halo/src/server.js",
     "prism:test": "node --test \"prism/test/*.test.mjs\"",
     "prism:eval": "node prism/evals/prism-evaluate.mjs",
     "prism:serve": "node prism/src/cli.mjs serve",
-    "prism:mask": "node prism/src/cli.mjs mask",
-    "eval": "node evals/run.mjs",
-    "eval:dev": "node evals/run.mjs --split dev",
-    "eval:holdout": "node evals/run.mjs --split holdout",
-    "eval:sealed": "node evals/sealed.mjs",
-    "eval:consistency": "node evals/consistency.mjs",
-    "redteam": "node evals/redteam.mjs",
-    "replay": "node evals/replay.mjs",
-    "serve": "node src/server.js"
+    "prism:mask": "node prism/src/cli.mjs mask"
   },
   "dependencies": {},
   "devDependencies": {}
