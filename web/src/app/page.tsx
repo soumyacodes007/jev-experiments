@@ -1,22 +1,43 @@
 "use client";
 
-import { useState, type FormEvent, type KeyboardEvent } from "react";
+import { useState, type FormEvent, type KeyboardEvent, type ReactNode } from "react";
 import { ArrowUp, Loader2 } from "lucide-react";
+import { Bar, BarChart, Cell, LabelList, XAxis, YAxis } from "recharts";
 
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { ChartContainer } from "@/components/ui/chart";
 import { cn } from "@/lib/utils";
 
 type Mode = "halo" | "prism";
 type Example = { label: string; text: string; color: string };
 type Detection = { start: number; end: number; category: string; subtype: string };
-type HaloResult = { safety?: string; subcategory?: string; confidence?: number; category?: string; tier?: string; error?: string; detail?: string };
+type HaloResult = {
+  safety?: string;
+  subcategory?: string;
+  confidence?: number;
+  category?: string;
+  tier?: string;
+  _envelope?: { signals?: Record<string, number>; decision?: { matched_rules?: string[] } };
+  error?: string;
+  detail?: string;
+};
 type PrismResult = { masked_text?: string; detections?: Detection[]; meta?: { latency_ms?: number; profile?: string }; error?: string; detail?: string };
+
+const BOX_H = "h-[46vh]";
 
 const PLACEHOLDER: Record<Mode, string> = {
   halo: "Paste an agent action or trajectory…",
   prism: "Paste text to scan for sensitive data…",
+};
+
+const CATEGORY_COLOR: Record<string, string> = {
+  IDENTITY: "#3b82f6",
+  CREDENTIAL: "#ef4444",
+  FINANCIAL: "#10b981",
+  HEALTH: "#8b5cf6",
+  DIGITAL: "#f97316",
 };
 
 const EXAMPLES: Record<Mode, Example[]> = {
@@ -102,16 +123,11 @@ export default function Home() {
 
   return (
     <main className="flex h-screen flex-col bg-background">
-      <header className="flex flex-col items-center gap-3 pt-4 pb-3">
+      <header className="flex flex-wrap items-center gap-3 px-6 pt-4 pb-3">
         <ToggleGroup
           type="single"
           value={mode}
-          onValueChange={(value) => {
-            if (value) {
-              setMode(value as Mode);
-              reset();
-            }
-          }}
+          onValueChange={(value) => { if (value) { setMode(value as Mode); reset(); } }}
           variant="outline"
           size="sm"
         >
@@ -119,7 +135,7 @@ export default function Home() {
           <ToggleGroupItem value="prism" className="px-5 text-xs font-medium tracking-wide">PRISM</ToggleGroupItem>
         </ToggleGroup>
 
-        <div className="flex flex-wrap items-center justify-center gap-2 px-4">
+        <div className="flex flex-wrap items-center gap-2">
           {EXAMPLES[mode].map((example) => (
             <button
               key={example.label}
@@ -133,43 +149,50 @@ export default function Home() {
         </div>
       </header>
 
-      <div className="grid min-h-0 flex-1 grid-cols-2 gap-6 px-6">
-        <div className="flex min-h-0 flex-col gap-4">
-          <form
-            onSubmit={send}
-            className="flex h-[34vh] min-h-0 flex-none flex-col overflow-hidden rounded-xl border bg-background shadow-xs transition-[color,box-shadow] focus-within:border-ring focus-within:ring-[3px] focus-within:ring-ring/50"
-          >
-            <Textarea
-              value={draft}
-              onChange={(event) => setDraft(event.target.value)}
-              onKeyDown={onKeyDown}
-              placeholder={PLACEHOLDER[mode]}
-              className="min-h-0 flex-1 resize-none rounded-none border-0 bg-transparent px-5 py-4 text-sm shadow-none focus-visible:border-0 focus-visible:ring-0"
-            />
-            <div className="flex items-center justify-between border-t px-4 py-3">
-              <span className="text-[11px] text-muted-foreground">⌘/Ctrl + Enter to send</span>
-              <Button type="submit" size="sm" className="gap-1.5" disabled={!draft.trim() || loading}>
-                {loading ? <Loader2 className="size-3.5 animate-spin" /> : <>Send <ArrowUp className="size-3.5" /></>}
-              </Button>
-            </div>
-          </form>
-
-          <div className="min-h-0 flex-1 overflow-y-auto rounded-xl border p-5">
-            {error ? (
-              <p className="text-sm text-red-600">{error}</p>
-            ) : loading ? (
-              <p className="text-sm text-muted-foreground">Running {mode.toUpperCase()}…</p>
-            ) : !hasResult ? (
-              <p className="text-sm text-muted-foreground">Result appears here after you send.</p>
-            ) : mode === "halo" && halo ? (
-              <HaloView result={halo} />
-            ) : prism ? (
-              <PrismView result={prism} original={draft} />
-            ) : null}
+      <div className="grid min-h-0 flex-1 grid-cols-2 items-start gap-6 px-6">
+        {/* LEFT: input */}
+        <form
+          onSubmit={send}
+          className={cn("flex min-h-0 flex-col self-center overflow-hidden rounded-xl border bg-background shadow-xs transition-[color,box-shadow] focus-within:border-ring focus-within:ring-[3px] focus-within:ring-ring/50", BOX_H)}
+        >
+          <Textarea
+            value={draft}
+            onChange={(event) => setDraft(event.target.value)}
+            onKeyDown={onKeyDown}
+            placeholder={PLACEHOLDER[mode]}
+            className="min-h-0 flex-1 resize-none rounded-none border-0 bg-transparent px-5 py-4 text-sm shadow-none focus-visible:border-0 focus-visible:ring-0"
+          />
+          <div className="flex items-center justify-between border-t px-4 py-3">
+            <span className="text-[11px] text-muted-foreground">⌘/Ctrl + Enter to send</span>
+            <Button type="submit" size="sm" className="gap-1.5" disabled={!draft.trim() || loading}>
+              {loading ? <Loader2 className="size-3.5 animate-spin" /> : <>Send <ArrowUp className="size-3.5" /></>}
+            </Button>
           </div>
-        </div>
+        </form>
 
-        <div />
+        {/* RIGHT: output */}
+        <div className="flex min-h-0 flex-col gap-4">
+          {mode === "halo" ? (
+            <div className={cn("rounded-xl border p-4", BOX_H)}>
+              {error ? <Muted className="text-red-600">{error}</Muted>
+                : loading ? <Muted>Running HALO…</Muted>
+                : !halo ? <Muted>Send an action to see the verdict.</Muted>
+                : <HaloChart result={halo} />}
+            </div>
+          ) : (
+            <>
+              <div className={cn("overflow-y-auto rounded-xl border p-4", BOX_H)}>
+                {error ? <Muted className="text-red-600">{error}</Muted>
+                  : loading ? <Muted>Running PRISM…</Muted>
+                  : !prism ? <Muted>Send text to see the marked output.</Muted>
+                  : <PrismOutput result={prism} original={draft} />}
+              </div>
+              <div className="h-[16vh] rounded-xl border p-3">
+                {prism && !error && !loading ? <PrismChart detections={prism.detections ?? []} /> : <Muted className="text-[11px]">Category breakdown</Muted>}
+              </div>
+            </>
+          )}
+        </div>
       </div>
 
       <footer className="border-t px-6 py-4">
@@ -181,73 +204,121 @@ export default function Home() {
   );
 }
 
-function HaloView({ result }: { result: HaloResult }) {
+function Muted({ children, className }: { children: ReactNode; className?: string }) {
+  return <p className={cn("text-sm text-muted-foreground", className)}>{children}</p>;
+}
+
+function prettySignal(key: string) {
+  return key.replace(/^sig_/, "").replace(/_/g, " ");
+}
+
+function HaloChart({ result }: { result: HaloResult }) {
   const unsafe = result.safety === "UNSAFE";
-  const confidence = Math.round((result.confidence ?? 0) * 100);
+  const barColor = unsafe ? "#ef4444" : "#10b981";
+  const signals = result._envelope?.signals ?? {};
+  const data = Object.entries(signals)
+    .map(([key, value]) => ({ name: prettySignal(key), value: Math.round(value * 100) }))
+    .filter((d) => d.value >= 15)
+    .sort((a, b) => b.value - a.value)
+    .slice(0, 6);
+  const rules = result._envelope?.decision?.matched_rules ?? [];
+
   return (
-    <div className="flex flex-col gap-4 text-sm">
-      <div className="flex items-center gap-2">
+    <div className="flex h-full flex-col">
+      <div className="flex flex-wrap items-center gap-2">
         <span className={cn("rounded-md px-2.5 py-1 text-xs font-semibold", unsafe ? "bg-red-100 text-red-700" : "bg-emerald-100 text-emerald-700")}>
           {result.safety ?? "—"}
         </span>
         {result.tier && (
-          <span className={cn("rounded-md px-2.5 py-1 text-xs font-medium", TIER_COLOR[result.tier] ?? "bg-secondary text-secondary-foreground")}>
-            {result.tier}
-          </span>
+          <span className={cn("rounded-md px-2.5 py-1 text-xs font-medium", TIER_COLOR[result.tier] ?? "bg-secondary text-secondary-foreground")}>{result.tier}</span>
+        )}
+        <span className="font-mono text-xs text-muted-foreground">{result.subcategory ?? "—"}</span>
+      </div>
+
+      <p className="mt-3 mb-1 text-[11px] text-muted-foreground">Why — strongest risk signals</p>
+      <div className="min-h-0 flex-1">
+        {data.length === 0 ? (
+          <Muted className="text-xs">No strong signals fired.</Muted>
+        ) : (
+          <ChartContainer>
+            <BarChart data={data} layout="vertical" margin={{ left: 4, right: 28, top: 2, bottom: 2 }} barCategoryGap={6}>
+              <XAxis type="number" domain={[0, 100]} hide />
+              <YAxis type="category" dataKey="name" width={116} tickLine={false} axisLine={false} tick={{ fontSize: 11 }} />
+              <Bar dataKey="value" radius={4} fill={barColor} isAnimationActive={false}>
+                <LabelList dataKey="value" position="right" formatter={(v: number) => `${v}%`} className="fill-muted-foreground" fontSize={10} />
+              </Bar>
+            </BarChart>
+          </ChartContainer>
         )}
       </div>
-      <div className="grid gap-2">
-        <Row label="Subcategory" value={result.subcategory ?? "—"} mono />
-        <Row label="Category" value={result.category ?? "—"} mono />
-      </div>
-      <div>
-        <div className="mb-1 flex items-center justify-between text-xs text-muted-foreground">
-          <span>Confidence</span>
-          <span>{confidence}%</span>
-        </div>
-        <div className="h-1.5 w-full overflow-hidden rounded-full bg-secondary">
-          <div className={cn("h-full rounded-full", unsafe ? "bg-red-500" : "bg-emerald-500")} style={{ width: `${confidence}%` }} />
-        </div>
-      </div>
-    </div>
-  );
-}
 
-function Row({ label, value, mono }: { label: string; value: string; mono?: boolean }) {
-  return (
-    <div className="flex items-center justify-between gap-4">
-      <span className="text-xs text-muted-foreground">{label}</span>
-      <span className={cn("text-xs font-medium", mono && "font-mono")}>{value}</span>
-    </div>
-  );
-}
-
-function PrismView({ result, original }: { result: PrismResult; original: string }) {
-  const detections = result.detections ?? [];
-  return (
-    <div className="flex flex-col gap-4 text-sm">
-      <div>
-        <p className="mb-1.5 text-xs text-muted-foreground">Masked output</p>
-        <p className="rounded-md bg-secondary/60 p-3 text-sm leading-relaxed whitespace-pre-wrap">
-          {result.masked_text ?? original}
-        </p>
-      </div>
-      <div>
-        <p className="mb-1.5 text-xs text-muted-foreground">
-          {detections.length === 0 ? "No sensitive values found" : `${detections.length} value${detections.length === 1 ? "" : "s"} protected`}
-        </p>
-        <div className="flex flex-wrap gap-1.5">
-          {detections.map((detection, index) => (
-            <span key={index} className="rounded-full border bg-background px-2.5 py-0.5 text-xs">
-              <span className="font-medium">{detection.subtype}</span>
-              <span className="text-muted-foreground"> · {detection.category}</span>
-            </span>
-          ))}
-        </div>
-      </div>
-      {result.meta?.latency_ms != null && (
-        <p className="text-[11px] text-muted-foreground">{result.meta.latency_ms}ms · {result.meta.profile ?? "economy"}</p>
+      {rules.length > 0 && (
+        <p className="mt-2 text-[11px] text-muted-foreground">Rules: <span className="font-mono">{rules.join(", ")}</span></p>
       )}
+    </div>
+  );
+}
+
+function PrismOutput({ result, original }: { result: PrismResult; original: string }) {
+  const detections = [...(result.detections ?? [])].sort((a, b) => a.start - b.start);
+  const pieces: ReactNode[] = [];
+  let cursor = 0;
+  for (let i = 0; i < detections.length; i++) {
+    const d = detections[i];
+    if (d.start < cursor) continue;
+    if (d.start > cursor) pieces.push(<span key={`t-${cursor}`}>{original.slice(cursor, d.start)}</span>);
+    pieces.push(
+      <mark
+        key={`m-${d.start}`}
+        title={`${d.category} · ${d.subtype}`}
+        className="rounded px-1 py-0.5 text-white"
+        style={{ backgroundColor: CATEGORY_COLOR[d.category] ?? "#71717a" }}
+      >
+        {original.slice(d.start, d.end)}
+      </mark>
+    );
+    cursor = d.end;
+  }
+  if (cursor < original.length) pieces.push(<span key="t-end">{original.slice(cursor)}</span>);
+
+  return (
+    <div className="flex flex-col gap-3 text-sm">
+      <div>
+        <p className="mb-1.5 text-[11px] text-muted-foreground">Marked output</p>
+        <p className="leading-relaxed whitespace-pre-wrap">{pieces}</p>
+      </div>
+      <div>
+        <p className="mb-1.5 text-[11px] text-muted-foreground">Masked version</p>
+        <p className="rounded-md bg-secondary/60 p-2.5 font-mono text-xs leading-relaxed whitespace-pre-wrap">{result.masked_text ?? original}</p>
+      </div>
+    </div>
+  );
+}
+
+function PrismChart({ detections }: { detections: Detection[] }) {
+  const counts = new Map<string, number>();
+  for (const d of detections) counts.set(d.category, (counts.get(d.category) ?? 0) + 1);
+  const data = [...counts.entries()].map(([category, count]) => ({ category, count }));
+
+  if (data.length === 0) {
+    return <Muted className="text-[11px]">No sensitive values found.</Muted>;
+  }
+  return (
+    <div className="flex h-full flex-col">
+      <p className="mb-1 text-[11px] text-muted-foreground">Marked by category</p>
+      <div className="min-h-0 flex-1">
+        <ChartContainer>
+          <BarChart data={data} margin={{ left: -20, right: 8, top: 4, bottom: 0 }} barCategoryGap={12}>
+            <XAxis dataKey="category" tickLine={false} axisLine={false} tick={{ fontSize: 9 }} />
+            <YAxis allowDecimals={false} width={28} tickLine={false} axisLine={false} tick={{ fontSize: 9 }} />
+            <Bar dataKey="count" radius={4} isAnimationActive={false}>
+              {data.map((entry) => (
+                <Cell key={entry.category} fill={CATEGORY_COLOR[entry.category] ?? "#71717a"} />
+              ))}
+            </Bar>
+          </BarChart>
+        </ChartContainer>
+      </div>
     </div>
   );
 }
