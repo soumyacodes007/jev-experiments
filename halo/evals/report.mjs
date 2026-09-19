@@ -7,7 +7,7 @@
 
 import { readFileSync, writeFileSync } from "node:fs";
 
-const cache = JSON.parse(readFileSync("evals/.cache.json", "utf8"));
+const cache = JSON.parse(readFileSync("halo/evals/.cache.json", "utf8"));
 const entries = Object.entries(cache).map(([key, v]) => {
   const id = key.slice(0, key.lastIndexOf(":"));
   const group = id.startsWith("s-a-") || id.startsWith("s-b-") ? "sealed" : id.startsWith("a-") ? "attack" : id.startsWith("b-") ? "benign" : "other";
@@ -284,6 +284,6 @@ function r6(n) {
   return (Math.round(n * 1e6) / 1e6).toFixed(6);
 }
 
-writeFileSync("report.md", md);
+writeFileSync("halo/report.md", md);
 console.log(`report.md written — ${entries.length} live responses summarized`);
 console.log(`  avg input tokens: ${r0(avgIn)}  | p50 latency: ${r0(pct(allMs, 50))}ms | cost/call: $${r6(costPerCall)}`);
