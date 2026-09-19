@@ -98,6 +98,93 @@ npm test
 Node ≥ 22. **Zero runtime dependencies** in both detector tracks — a
 security/privacy tool should not carry a supply chain.
 
+## Running guide
+
+Three processes, three terminals. HALO and PRISM each default to port `8787`,
+so when running them together **HALO must be moved to `8788`** — the web app
+already expects it there.
+
+### 1. HALO service — port 8788
+
+```bash
+HALO_PORT=8788 npm run halo:serve
+```
+
+Starts in **shadow mode** by default (classifies and logs, never blocks).
+Verify it's up:
+
+```bash
+curl http://127.0.0.1:8788/healthz
+# {"ok":true,"service":"halo","version":"0.1.0","mode":"shadow"}
+```
+
+| Env var | Default | What it does |
+|---|---|---|
+| `HALO_PORT` | `8787` | listen port — **set to `8788`** to match the web app |
+| `HALO_MODE` | `shadow` | `shadow` (log only) or `enforce` (tier is authoritative) |
+| `HALO_LOG` | `logs/decisions.jsonl` | decision log path (JSONL, replayable) |
+| `HALO_RATE_PER_SEC` / `HALO_BURST` | `200` / `400` | request rate limiting |
+| `HALO_MAX_INFLIGHT` | `32` | concurrent Jev calls allowed |
+| `HALO_ESCALATE` | `1` | set to `0` to disable the low-confidence second call |
+
+### 2. PRISM service — port 8787 (default, no flags needed)
+
+```bash
+npm run prism:serve
+```
+
+Verify it's up:
+
+```bash
+curl -X POST http://127.0.0.1:8787/v1/mask \
+  -H 'content-type: application/json' \
+  -d '{"text":"email me at a@b.com"}'
+```
+
+Override host/port with `--host` / `--port` flags or `HOST` / `PORT` env vars
+if `8787` is taken.
+
+### 3. Web frontend — port 3000
+
+```bash
+npm run web:dev
+```
+
+Open **http://localhost:3000**. The HALO/PRISM toggle switches which service
+the input box talks to. If a request fails with `*_backend_unavailable`, the
+matching service from step 1 or 2 isn't running yet.
+
+The frontend's API routes point at the two services via env vars (optional —
+only needed if you're not using the default ports above):
+
+```bash
+# web/.env.local
+HALO_API_URL=http://127.0.0.1:8788
+PRISM_API_URL=http://127.0.0.1:8787
+```
+
+### All at once
+
+```bash
+# terminal 1
+HALO_PORT=8788 npm run halo:serve
+# terminal 2
+npm run prism:serve
+# terminal 3
+npm run web:dev
+```
+
+### Just the engines, no UI
+
+Both detectors run standalone without the frontend — useful for evals, curl,
+or wiring into your own pipeline:
+
+```bash
+npm run halo:eval        # HALO's full corpus against live Jev
+npm run prism:eval       # PRISM's 50-case evaluation
+npm run prism:mask -- --text "call me at 555-0199"   # mask text from the CLI
+```
+
 ## Repository conventions
 
 - **`.env` is never committed.** Only `.env.example` is tracked.
