@@ -1,5 +1,0 @@
-import styles from "../app/page.module.css";
-
-export function HowItWorks() {
-  return <section className={styles.howSection} id="how-it-works"><div className={styles.sectionKicker}><span>02</span> THE SIMPLE PART <span className={styles.kickerLine} /></div><div className={styles.howGrid}><div><h2>Private by<br /><em>construction.</em></h2><p>Masking should not be another black box. PRISM separates the intelligence that understands your text from the deterministic code that changes it.</p></div><div className={styles.steps}><article><span>01</span><div><h3>Find the value</h3><p>Jev reads the surrounding context and identifies the exact sensitive span.</p></div></article><article><span>02</span><div><h3>Name the type</h3><p>Every match gets a useful label: <code>EMAIL</code>, <code>PHONE</code>, <code>API_KEY</code>, or one of 40 types.</p></div></article><article><span>03</span><div><h3>Mask deterministically</h3><p>Your system receives the same text with a stable placeholder in its place.</p></div></article></div></div></section>;
-}
