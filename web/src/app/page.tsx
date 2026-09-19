@@ -2,12 +2,10 @@
 
 import { useState, type FormEvent, type KeyboardEvent, type ReactNode } from "react";
 import { ArrowUp, Loader2 } from "lucide-react";
-import { Bar, BarChart, Cell, XAxis, YAxis } from "recharts";
 
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { ChartContainer } from "@/components/ui/chart";
 import { cn } from "@/lib/utils";
 
 type Mode = "halo" | "prism";
@@ -331,29 +329,27 @@ function PrismOutput({ result, original }: { result: PrismResult; original: stri
 }
 
 function PrismChart({ detections }: { detections: Detection[] }) {
-  const counts = new Map<string, number>();
-  for (const d of detections) counts.set(d.category, (counts.get(d.category) ?? 0) + 1);
-  const data = [...counts.entries()].map(([category, count]) => ({ category, count }));
-
-  if (data.length === 0) {
+  if (detections.length === 0) {
     return <Muted className="text-[11px]">No sensitive values found.</Muted>;
   }
   return (
-    <div className="flex h-full flex-col">
-      <p className="mb-1 text-[11px] text-muted-foreground">Marked by category</p>
-      <div className="min-h-0 flex-1">
-        <ChartContainer>
-          <BarChart data={data} margin={{ left: -20, right: 8, top: 4, bottom: 0 }} barCategoryGap={12}>
-            <XAxis dataKey="category" tickLine={false} axisLine={false} tick={{ fontSize: 9 }} />
-            <YAxis allowDecimals={false} width={28} tickLine={false} axisLine={false} tick={{ fontSize: 9 }} />
-            <Bar dataKey="count" radius={4} isAnimationActive={false}>
-              {data.map((entry) => (
-                <Cell key={entry.category} fill={CATEGORY_COLOR[entry.category] ?? "#71717a"} />
-              ))}
-            </Bar>
-          </BarChart>
-        </ChartContainer>
-      </div>
+    <div className="flex h-full flex-col gap-1.5 overflow-y-auto">
+      {detections.map((d, i) => (
+        <div key={i} className="flex items-center gap-2">
+          <span
+            className="rounded-md px-2 py-1 text-xs font-semibold text-white"
+            style={{ backgroundColor: CATEGORY_COLOR[d.category] ?? "#71717a" }}
+          >
+            {d.category}
+          </span>
+          <span
+            className="font-mono text-sm font-bold"
+            style={{ color: CATEGORY_COLOR[d.category] ?? "#71717a" }}
+          >
+            {d.subtype}
+          </span>
+        </div>
+      ))}
     </div>
   );
 }
