@@ -169,7 +169,7 @@ export default function Home() {
             onChange={(event) => setDraft(event.target.value)}
             onKeyDown={onKeyDown}
             placeholder={PLACEHOLDER[mode]}
-            className="min-h-0 flex-1 resize-none rounded-none border-0 bg-transparent px-5 py-4 text-sm shadow-none focus-visible:border-0 focus-visible:ring-0"
+            className="min-h-0 flex-1 resize-none rounded-none border-0 bg-transparent px-5 py-4 text-base shadow-none focus-visible:border-0 focus-visible:ring-0 md:text-base"
           />
           <div className="flex items-center justify-between border-t px-4 py-3">
             <span className="text-[11px] text-muted-foreground">⌘/Ctrl + Enter to send</span>
