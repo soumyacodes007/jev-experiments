@@ -1,25 +1,33 @@
-import { CategoryGrid } from "@/components/category-grid";
-import { Hero } from "@/components/hero";
-import { HowItWorks } from "@/components/how-it-works";
-import { RedactionDemo } from "@/components/redaction-demo";
-import { SiteFooter } from "@/components/site-footer";
-import { SiteHeader } from "@/components/site-header";
-import styles from "./page.module.css";
+"use client";
+
+import { useState } from "react";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+
+type Mode = "halo" | "prism";
 
 export default function Home() {
+  const [mode, setMode] = useState<Mode>("halo");
+
   return (
-    <div className={styles.page}>
-      <SiteHeader />
-      <main id="top">
-        <Hero />
-        <RedactionDemo />
-        <section className={styles.statStrip} id="coverage">
-          <div><strong>40</strong><span>sensitive types</span></div><div><strong>5</strong><span>privacy families</span></div><div><strong>0</strong><span>raw values in output</span></div><div><strong>1</strong><span>clear masked format</span></div>
-        </section>
-        <HowItWorks />
-        <CategoryGrid />
-      </main>
-      <SiteFooter />
-    </div>
+    <main className="min-h-screen bg-background">
+      <div className="flex justify-center pt-6">
+        <ToggleGroup
+          type="single"
+          value={mode}
+          onValueChange={(value) => {
+            if (value) setMode(value as Mode);
+          }}
+          variant="outline"
+          size="sm"
+        >
+          <ToggleGroupItem value="halo" className="px-4 text-xs font-medium tracking-wide">
+            HALO
+          </ToggleGroupItem>
+          <ToggleGroupItem value="prism" className="px-4 text-xs font-medium tracking-wide">
+            PRISM
+          </ToggleGroupItem>
+        </ToggleGroup>
+      </div>
+    </main>
   );
 }
