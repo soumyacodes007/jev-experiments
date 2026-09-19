@@ -1,6 +1,6 @@
 # PRISM: Economy vs. Latency Profile
 
-## CTO decision brief
+## Decision brief
 
 **Document status:** Development benchmark and architecture decision record  
 **Evaluation date:** 2026-09-19  
