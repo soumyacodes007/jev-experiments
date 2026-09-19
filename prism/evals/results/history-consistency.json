@@ -1,0 +1,195 @@
+{
+  "generated_at": "2026-09-19T15:02:27.046Z",
+  "started_at": "2026-09-19T15:02:24.344Z",
+  "dataset": "C:\\Users\\soumy\\desktop\\jev-halo-prism\\evals\\prism-50.json",
+  "cases": 1,
+  "repeats": 3,
+  "runs": 3,
+  "profile": "economy",
+  "model": "jev-1.13.0",
+  "taxonomy_version": "1.0.0",
+  "wall_ms": 2700,
+  "summary": {
+    "errors": 0,
+    "exact_case_passes": 3,
+    "exact_case_accuracy": 1,
+    "strict": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "relaxed": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "masking_exact_rate": 1,
+    "input_tokens": 35767,
+    "output_tokens": 3290,
+    "api_calls": 9,
+    "estimated_cost_usd": 0.0015022140000000002,
+    "latency_ms": {
+      "p50": 2380,
+      "p95": 2699,
+      "p99": 2699,
+      "mean": 2424
+    }
+  },
+  "per_subtype": {
+    "MEDICAL_HISTORY": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    }
+  },
+  "failures": [],
+  "runs_detail": [
+    {
+      "id": "health_medical_history",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH",
+          "score": 0.8747513797708963
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 11789,
+        "output_tokens": 1067,
+        "attempts": 3,
+        "latency_ms": 2699
+      }
+    },
+    {
+      "id": "health_medical_history",
+      "repeat": 1,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH",
+          "score": 0.8961139465632975
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 11789,
+        "output_tokens": 1067,
+        "attempts": 3,
+        "latency_ms": 2380
+      }
+    },
+    {
+      "id": "health_medical_history",
+      "repeat": 2,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH",
+          "score": 0.8815565092145029
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 12189,
+        "output_tokens": 1156,
+        "attempts": 3,
+        "latency_ms": 2193
+      }
+    }
+  ]
+}

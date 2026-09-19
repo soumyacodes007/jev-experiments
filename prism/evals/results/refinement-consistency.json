@@ -1,0 +1,1248 @@
+{
+  "generated_at": "2026-09-19T15:01:58.765Z",
+  "started_at": "2026-09-19T15:01:49.607Z",
+  "dataset": "C:\\Users\\soumy\\desktop\\jev-halo-prism\\evals\\prism-50.json",
+  "cases": 6,
+  "repeats": 3,
+  "runs": 18,
+  "profile": "economy",
+  "model": "jev-1.13.0",
+  "taxonomy_version": "1.0.0",
+  "wall_ms": 9142,
+  "summary": {
+    "errors": 0,
+    "exact_case_passes": 15,
+    "exact_case_accuracy": 0.8333333333333334,
+    "strict": {
+      "tp": 21,
+      "fp": 3,
+      "fn": 3,
+      "precision": 0.875,
+      "recall": 0.875,
+      "f1": 0.875
+    },
+    "relaxed": {
+      "tp": 24,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "masking_exact_rate": 0.8333333333333334,
+    "input_tokens": 240177,
+    "output_tokens": 22965,
+    "api_calls": 54,
+    "estimated_cost_usd": 0.010087434000000001,
+    "latency_ms": {
+      "p50": 1418,
+      "p95": 4479,
+      "p99": 4479,
+      "mean": 1921.888888888889
+    }
+  },
+  "per_subtype": {
+    "ADDRESS": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "DIAGNOSIS": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "IMEI": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "IP_ADDRESS": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "MEDICAL_HISTORY": {
+      "tp": 0,
+      "fp": 3,
+      "fn": 3,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0
+    },
+    "MEDICATION": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PROCEDURE": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "USERNAME": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    }
+  },
+  "failures": [
+    {
+      "id": "health_medical_history",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 21,
+          "end": 37,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH",
+          "score": 0.8494835229445904
+        }
+      ],
+      "expected": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 21,
+          "end": 37,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH",
+          "score": 0.8494835229445904
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 11744,
+        "output_tokens": 1067,
+        "attempts": 3,
+        "latency_ms": 1099
+      }
+    },
+    {
+      "id": "health_medical_history",
+      "repeat": 1,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 21,
+          "end": 37,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH",
+          "score": 0.8352841725102426
+        }
+      ],
+      "expected": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 21,
+          "end": 37,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH",
+          "score": 0.8352841725102426
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 11744,
+        "output_tokens": 1067,
+        "attempts": 3,
+        "latency_ms": 1418
+      }
+    },
+    {
+      "id": "health_medical_history",
+      "repeat": 2,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 21,
+          "end": 37,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH",
+          "score": 0.8387824318158735
+        }
+      ],
+      "expected": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 21,
+          "end": 37,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH",
+          "score": 0.8387824318158735
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 12144,
+        "output_tokens": 1156,
+        "attempts": 3,
+        "latency_ms": 1423
+      }
+    }
+  ],
+  "runs_detail": [
+    {
+      "id": "identity_address",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 24,
+          "end": 47,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 24,
+          "end": 47,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY",
+          "score": 0.8933771866179462
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 10,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 15404,
+        "output_tokens": 1551,
+        "attempts": 3,
+        "latency_ms": 3813
+      }
+    },
+    {
+      "id": "identity_address",
+      "repeat": 1,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 24,
+          "end": 47,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 24,
+          "end": 47,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY",
+          "score": 0.8886769912995897
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 10,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 14974,
+        "output_tokens": 1455,
+        "attempts": 3,
+        "latency_ms": 4479
+      }
+    },
+    {
+      "id": "identity_address",
+      "repeat": 2,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 24,
+          "end": 47,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 24,
+          "end": 47,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY",
+          "score": 0.8742221412040648
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 10,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 15404,
+        "output_tokens": 1551,
+        "attempts": 3,
+        "latency_ms": 4350
+      }
+    },
+    {
+      "id": "health_diagnosis",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 24,
+          "end": 39,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 24,
+          "end": 39,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.9721257999850974
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 13282,
+        "output_tokens": 1243,
+        "attempts": 3,
+        "latency_ms": 3771
+      }
+    },
+    {
+      "id": "health_diagnosis",
+      "repeat": 1,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 24,
+          "end": 39,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 24,
+          "end": 39,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.9746216505616351
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 13282,
+        "output_tokens": 1243,
+        "attempts": 3,
+        "latency_ms": 1100
+      }
+    },
+    {
+      "id": "health_diagnosis",
+      "repeat": 2,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 24,
+          "end": 39,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 24,
+          "end": 39,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.9719910688133752
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 13282,
+        "output_tokens": 1243,
+        "attempts": 3,
+        "latency_ms": 1370
+      }
+    },
+    {
+      "id": "health_medication",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 28,
+          "end": 56,
+          "subtype": "MEDICATION",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 28,
+          "end": 56,
+          "subtype": "MEDICATION",
+          "category": "HEALTH",
+          "score": 0.9824142781909379
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 14049,
+        "output_tokens": 1426,
+        "attempts": 3,
+        "latency_ms": 1109
+      }
+    },
+    {
+      "id": "health_medication",
+      "repeat": 1,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 28,
+          "end": 56,
+          "subtype": "MEDICATION",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 28,
+          "end": 56,
+          "subtype": "MEDICATION",
+          "category": "HEALTH",
+          "score": 0.989846400767953
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 14083,
+        "output_tokens": 1434,
+        "attempts": 3,
+        "latency_ms": 1425
+      }
+    },
+    {
+      "id": "health_medication",
+      "repeat": 2,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 28,
+          "end": 56,
+          "subtype": "MEDICATION",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 28,
+          "end": 56,
+          "subtype": "MEDICATION",
+          "category": "HEALTH",
+          "score": 0.989846400767953
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 13685,
+        "output_tokens": 1344,
+        "attempts": 3,
+        "latency_ms": 1418
+      }
+    },
+    {
+      "id": "health_procedure",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 22,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 22,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH",
+          "score": 0.877446291787055
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 13592,
+        "output_tokens": 1321,
+        "attempts": 3,
+        "latency_ms": 1446
+      }
+    },
+    {
+      "id": "health_procedure",
+      "repeat": 1,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 22,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 22,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH",
+          "score": 0.8831238230537393
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 13592,
+        "output_tokens": 1321,
+        "attempts": 3,
+        "latency_ms": 1418
+      }
+    },
+    {
+      "id": "health_procedure",
+      "repeat": 2,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 22,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 22,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH",
+          "score": 0.8668086132797752
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 13592,
+        "output_tokens": 1321,
+        "attempts": 3,
+        "latency_ms": 1142
+      }
+    },
+    {
+      "id": "health_medical_history",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 21,
+          "end": 37,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH",
+          "score": 0.8494835229445904
+        }
+      ],
+      "expected": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 21,
+          "end": 37,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH",
+          "score": 0.8494835229445904
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 11744,
+        "output_tokens": 1067,
+        "attempts": 3,
+        "latency_ms": 1099
+      }
+    },
+    {
+      "id": "health_medical_history",
+      "repeat": 1,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 21,
+          "end": 37,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH",
+          "score": 0.8352841725102426
+        }
+      ],
+      "expected": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 21,
+          "end": 37,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH",
+          "score": 0.8352841725102426
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 11744,
+        "output_tokens": 1067,
+        "attempts": 3,
+        "latency_ms": 1418
+      }
+    },
+    {
+      "id": "health_medical_history",
+      "repeat": 2,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 21,
+          "end": 37,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH",
+          "score": 0.8387824318158735
+        }
+      ],
+      "expected": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 21,
+          "end": 37,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH",
+          "score": 0.8387824318158735
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 12144,
+        "output_tokens": 1156,
+        "attempts": 3,
+        "latency_ms": 1423
+      }
+    },
+    {
+      "id": "mixed_digital",
+      "repeat": 0,
+      "expected_count": 3,
+      "predicted_count": 3,
+      "strict": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "IMEI",
+          "category": "DIGITAL"
+        },
+        {
+          "start": 38,
+          "end": 49,
+          "subtype": "IP_ADDRESS",
+          "category": "DIGITAL"
+        },
+        {
+          "start": 64,
+          "end": 72,
+          "subtype": "USERNAME",
+          "category": "DIGITAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "IMEI",
+          "category": "DIGITAL",
+          "score": 0.9685469281169012
+        },
+        {
+          "start": 38,
+          "end": 49,
+          "subtype": "IP_ADDRESS",
+          "category": "DIGITAL",
+          "score": 0.8306623862918074
+        },
+        {
+          "start": 64,
+          "end": 72,
+          "subtype": "USERNAME",
+          "category": "DIGITAL",
+          "score": 0.99498743710662
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 12108,
+        "output_tokens": 1074,
+        "attempts": 3,
+        "latency_ms": 1389
+      }
+    },
+    {
+      "id": "mixed_digital",
+      "repeat": 1,
+      "expected_count": 3,
+      "predicted_count": 3,
+      "strict": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "IMEI",
+          "category": "DIGITAL"
+        },
+        {
+          "start": 38,
+          "end": 49,
+          "subtype": "IP_ADDRESS",
+          "category": "DIGITAL"
+        },
+        {
+          "start": 64,
+          "end": 72,
+          "subtype": "USERNAME",
+          "category": "DIGITAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "IMEI",
+          "category": "DIGITAL",
+          "score": 0.9573479717381596
+        },
+        {
+          "start": 38,
+          "end": 49,
+          "subtype": "IP_ADDRESS",
+          "category": "DIGITAL",
+          "score": 0.9433981132056604
+        },
+        {
+          "start": 64,
+          "end": 72,
+          "subtype": "USERNAME",
+          "category": "DIGITAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 12108,
+        "output_tokens": 1074,
+        "attempts": 3,
+        "latency_ms": 1335
+      }
+    },
+    {
+      "id": "mixed_digital",
+      "repeat": 2,
+      "expected_count": 3,
+      "predicted_count": 3,
+      "strict": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "IMEI",
+          "category": "DIGITAL"
+        },
+        {
+          "start": 38,
+          "end": 49,
+          "subtype": "IP_ADDRESS",
+          "category": "DIGITAL"
+        },
+        {
+          "start": 64,
+          "end": 72,
+          "subtype": "USERNAME",
+          "category": "DIGITAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "IMEI",
+          "category": "DIGITAL",
+          "score": 0.9515978740065268
+        },
+        {
+          "start": 38,
+          "end": 49,
+          "subtype": "IP_ADDRESS",
+          "category": "DIGITAL",
+          "score": 0.9746794344808963
+        },
+        {
+          "start": 64,
+          "end": 72,
+          "subtype": "USERNAME",
+          "category": "DIGITAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 3,
+        "input_tokens": 12108,
+        "output_tokens": 1074,
+        "attempts": 3,
+        "latency_ms": 1089
+      }
+    }
+  ]
+}

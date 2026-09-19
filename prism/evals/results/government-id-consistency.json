@@ -1,0 +1,287 @@
+{
+  "generated_at": "2026-09-19T15:03:26.493Z",
+  "started_at": "2026-09-19T15:03:22.948Z",
+  "dataset": "C:\\Users\\soumy\\desktop\\jev-halo-prism\\evals\\prism-50.json",
+  "cases": 1,
+  "repeats": 5,
+  "runs": 5,
+  "profile": "economy",
+  "model": "jev-1.13.0",
+  "taxonomy_version": "1.0.0",
+  "wall_ms": 3543,
+  "summary": {
+    "errors": 0,
+    "exact_case_passes": 5,
+    "exact_case_accuracy": 1,
+    "strict": {
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "relaxed": {
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "masking_exact_rate": 1,
+    "input_tokens": 50770,
+    "output_tokens": 3940,
+    "api_calls": 10,
+    "estimated_cost_usd": 0.00213234,
+    "latency_ms": {
+      "p50": 2826,
+      "p95": 3334,
+      "p99": 3334,
+      "mean": 2507.6
+    }
+  },
+  "per_subtype": {
+    "GOVERNMENT_ID": {
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    }
+  },
+  "failures": [],
+  "runs_detail": [
+    {
+      "id": "identity_government_id",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 49,
+          "end": 60,
+          "subtype": "GOVERNMENT_ID",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 49,
+          "end": 60,
+          "subtype": "GOVERNMENT_ID",
+          "category": "IDENTITY",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 10154,
+        "output_tokens": 788,
+        "attempts": 2,
+        "latency_ms": 2882
+      }
+    },
+    {
+      "id": "identity_government_id",
+      "repeat": 1,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 49,
+          "end": 60,
+          "subtype": "GOVERNMENT_ID",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 49,
+          "end": 60,
+          "subtype": "GOVERNMENT_ID",
+          "category": "IDENTITY",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 10154,
+        "output_tokens": 788,
+        "attempts": 2,
+        "latency_ms": 2791
+      }
+    },
+    {
+      "id": "identity_government_id",
+      "repeat": 2,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 49,
+          "end": 60,
+          "subtype": "GOVERNMENT_ID",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 49,
+          "end": 60,
+          "subtype": "GOVERNMENT_ID",
+          "category": "IDENTITY",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 10154,
+        "output_tokens": 788,
+        "attempts": 2,
+        "latency_ms": 3334
+      }
+    },
+    {
+      "id": "identity_government_id",
+      "repeat": 3,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 49,
+          "end": 60,
+          "subtype": "GOVERNMENT_ID",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 49,
+          "end": 60,
+          "subtype": "GOVERNMENT_ID",
+          "category": "IDENTITY",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 10154,
+        "output_tokens": 788,
+        "attempts": 2,
+        "latency_ms": 2826
+      }
+    },
+    {
+      "id": "identity_government_id",
+      "repeat": 4,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 49,
+          "end": 60,
+          "subtype": "GOVERNMENT_ID",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 49,
+          "end": 60,
+          "subtype": "GOVERNMENT_ID",
+          "category": "IDENTITY",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 10154,
+        "output_tokens": 788,
+        "attempts": 2,
+        "latency_ms": 705
+      }
+    }
+  ]
+}

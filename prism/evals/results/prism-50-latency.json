@@ -1,0 +1,3171 @@
+{
+  "generated_at": "2026-09-19T15:08:20.785Z",
+  "started_at": "2026-09-19T15:08:06.805Z",
+  "dataset": "C:\\Users\\soumy\\desktop\\jev-halo-prism\\evals\\prism-50.json",
+  "cases": 50,
+  "repeats": 1,
+  "runs": 50,
+  "profile": "latency",
+  "model": "jev-1.13.0",
+  "taxonomy_version": "1.0.0",
+  "wall_ms": 13958,
+  "summary": {
+    "errors": 0,
+    "exact_case_passes": 46,
+    "exact_case_accuracy": 0.92,
+    "strict": {
+      "tp": 53,
+      "fp": 7,
+      "fn": 4,
+      "precision": 0.8833333333333333,
+      "recall": 0.9298245614035088,
+      "f1": 0.905982905982906
+    },
+    "relaxed": {
+      "tp": 55,
+      "fp": 5,
+      "fn": 2,
+      "precision": 0.9166666666666666,
+      "recall": 0.9649122807017544,
+      "f1": 0.9401709401709402
+    },
+    "masking_exact_rate": 0.92,
+    "input_tokens": 1337521,
+    "output_tokens": 215010,
+    "api_calls": 50,
+    "estimated_cost_usd": 0.056175882,
+    "latency_ms": {
+      "p50": 776,
+      "p95": 3382,
+      "p99": 4199,
+      "mean": 1082.18
+    }
+  },
+  "per_subtype": {
+    "ACCESS_TOKEN": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "ACCOUNT_ID": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "ADDRESS": {
+      "tp": 0,
+      "fp": 2,
+      "fn": 1,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0
+    },
+    "API_KEY": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "BANK_ACCOUNT": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "CONNECTION_STRING": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "CREDIT_CARD": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "CVV": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "DATABASE_CREDENTIAL": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "DATE_OF_BIRTH": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "DEVICE_ID": {
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.6666666666666666
+    },
+    "DIAGNOSIS": {
+      "tp": 2,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.6666666666666666
+    },
+    "DIGITAL_PAYMENT_ID": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "DRIVER_LICENSE": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "EMAIL": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "GOVERNMENT_ID": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "HEALTH_PLAN_ID": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "HEALTHCARE_PROVIDER_ID": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "IBAN": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "IMEI": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    "IP_ADDRESS": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "JWT": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "MAC_ADDRESS": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "MEDICAL_HISTORY": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1,
+      "recall": 0,
+      "f1": 0
+    },
+    "MEDICAL_RECORD_ID": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "MEDICATION": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PASSPORT": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PASSWORD": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PERSON_NAME": {
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PHONE": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PRIVATE_KEY": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PROCEDURE": {
+      "tp": 0,
+      "fp": 2,
+      "fn": 1,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0
+    },
+    "REFRESH_TOKEN": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "ROUTING_NUMBER": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "SESSION_TOKEN": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "SSH_PRIVATE_KEY": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "SWIFT_BIC": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "TAX_ID": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "URL": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "USERNAME": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    }
+  },
+  "failures": [
+    {
+      "id": "identity_address",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 2,
+      "strict": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 24,
+          "end": 47,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 24,
+          "end": 26,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY",
+          "score": 0.7771100308193171
+        },
+        {
+          "start": 37,
+          "end": 47,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY",
+          "score": 0.6292853089020909
+        }
+      ],
+      "expected": [
+        {
+          "start": 24,
+          "end": 47,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 24,
+          "end": 26,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY",
+          "score": 0.7771100308193171
+        },
+        {
+          "start": 37,
+          "end": 47,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY",
+          "score": 0.6292853089020909
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 10,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 33490,
+        "output_tokens": 5367,
+        "attempts": 1,
+        "latency_ms": 3995
+      }
+    },
+    {
+      "id": "health_procedure",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 2,
+      "strict": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 22,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 22,
+          "end": 30,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH",
+          "score": 0.7256031973468695
+        },
+        {
+          "start": 38,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH",
+          "score": 0.7511990415329348
+        }
+      ],
+      "expected": [
+        {
+          "start": 22,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 22,
+          "end": 30,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH",
+          "score": 0.7256031973468695
+        },
+        {
+          "start": 38,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH",
+          "score": 0.7511990415329348
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 30179,
+        "output_tokens": 4842,
+        "attempts": 1,
+        "latency_ms": 876
+      }
+    },
+    {
+      "id": "health_medical_history",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 2,
+      "strict": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 1
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 31,
+          "end": 37,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.9649870465451854
+        },
+        {
+          "start": 48,
+          "end": 54,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.8342661445845685
+        }
+      ],
+      "expected": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 31,
+          "end": 37,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.9649870465451854
+        },
+        {
+          "start": 48,
+          "end": 54,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.8342661445845685
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 26864,
+        "output_tokens": 4304,
+        "attempts": 1,
+        "latency_ms": 982
+      }
+    },
+    {
+      "id": "mixed_digital",
+      "repeat": 0,
+      "expected_count": 3,
+      "predicted_count": 3,
+      "strict": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 1
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "IMEI",
+          "category": "DIGITAL"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "DEVICE_ID",
+          "category": "DIGITAL",
+          "score": 0.9273618495495703
+        }
+      ],
+      "expected": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "IMEI",
+          "category": "DIGITAL"
+        },
+        {
+          "start": 38,
+          "end": 49,
+          "subtype": "IP_ADDRESS",
+          "category": "DIGITAL"
+        },
+        {
+          "start": 64,
+          "end": 72,
+          "subtype": "USERNAME",
+          "category": "DIGITAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "DEVICE_ID",
+          "category": "DIGITAL",
+          "score": 0.9273618495495703
+        },
+        {
+          "start": 38,
+          "end": 49,
+          "subtype": "IP_ADDRESS",
+          "category": "DIGITAL",
+          "score": 0.9486832980505138
+        },
+        {
+          "start": 64,
+          "end": 72,
+          "subtype": "USERNAME",
+          "category": "DIGITAL",
+          "score": 0.99498743710662
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 26911,
+        "output_tokens": 4334,
+        "attempts": 1,
+        "latency_ms": 707
+      }
+    }
+  ],
+  "runs_detail": [
+    {
+      "id": "identity_person_name",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 26,
+          "end": 38,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 26,
+          "end": 38,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY",
+          "score": 0.9695359714832658
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 30175,
+        "output_tokens": 4843,
+        "attempts": 1,
+        "latency_ms": 3255
+      }
+    },
+    {
+      "id": "identity_email",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 35,
+          "end": 60,
+          "subtype": "EMAIL",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 35,
+          "end": 60,
+          "subtype": "EMAIL",
+          "category": "IDENTITY",
+          "score": 0.9899494936611666
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 23558,
+        "output_tokens": 3759,
+        "attempts": 1,
+        "latency_ms": 4199
+      }
+    },
+    {
+      "id": "identity_phone",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 26,
+          "end": 41,
+          "subtype": "PHONE",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 26,
+          "end": 41,
+          "subtype": "PHONE",
+          "category": "IDENTITY",
+          "score": 0.9643650760992956
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 6,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 20265,
+        "output_tokens": 3222,
+        "attempts": 1,
+        "latency_ms": 3382
+      }
+    },
+    {
+      "id": "identity_address",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 2,
+      "strict": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 24,
+          "end": 47,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 24,
+          "end": 26,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY",
+          "score": 0.7771100308193171
+        },
+        {
+          "start": 37,
+          "end": 47,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY",
+          "score": 0.6292853089020909
+        }
+      ],
+      "expected": [
+        {
+          "start": 24,
+          "end": 47,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 24,
+          "end": 26,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY",
+          "score": 0.7771100308193171
+        },
+        {
+          "start": 37,
+          "end": 47,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY",
+          "score": 0.6292853089020909
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 10,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 33490,
+        "output_tokens": 5367,
+        "attempts": 1,
+        "latency_ms": 3995
+      }
+    },
+    {
+      "id": "identity_dob",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 31,
+          "end": 47,
+          "subtype": "DATE_OF_BIRTH",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 31,
+          "end": 47,
+          "subtype": "DATE_OF_BIRTH",
+          "category": "IDENTITY",
+          "score": 0.8306623862918076
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 30183,
+        "output_tokens": 4860,
+        "attempts": 1,
+        "latency_ms": 2112
+      }
+    },
+    {
+      "id": "identity_passport",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 23,
+          "end": 31,
+          "subtype": "PASSPORT",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 23,
+          "end": 31,
+          "subtype": "PASSPORT",
+          "category": "IDENTITY",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 30185,
+        "output_tokens": 4851,
+        "attempts": 1,
+        "latency_ms": 784
+      }
+    },
+    {
+      "id": "identity_driver_license",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 35,
+          "end": 51,
+          "subtype": "DRIVER_LICENSE",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 35,
+          "end": 51,
+          "subtype": "DRIVER_LICENSE",
+          "category": "IDENTITY",
+          "score": 0.99498743710662
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 6,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 20265,
+        "output_tokens": 3242,
+        "attempts": 1,
+        "latency_ms": 529
+      }
+    },
+    {
+      "id": "identity_government_id",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 49,
+          "end": 60,
+          "subtype": "GOVERNMENT_ID",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 49,
+          "end": 60,
+          "subtype": "GOVERNMENT_ID",
+          "category": "IDENTITY",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 26880,
+        "output_tokens": 4332,
+        "attempts": 1,
+        "latency_ms": 1160
+      }
+    },
+    {
+      "id": "identity_tax_id",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 19,
+          "end": 29,
+          "subtype": "TAX_ID",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 19,
+          "end": 29,
+          "subtype": "TAX_ID",
+          "category": "IDENTITY",
+          "score": 0.9849873095629201
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 23559,
+        "output_tokens": 3777,
+        "attempts": 1,
+        "latency_ms": 415
+      }
+    },
+    {
+      "id": "credential_api_key",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 43,
+          "end": 65,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 43,
+          "end": 65,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL",
+          "score": 0.99498743710662
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 26877,
+        "output_tokens": 4334,
+        "attempts": 1,
+        "latency_ms": 1472
+      }
+    },
+    {
+      "id": "credential_password",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 26,
+          "end": 38,
+          "subtype": "PASSWORD",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 26,
+          "end": 38,
+          "subtype": "PASSWORD",
+          "category": "CREDENTIAL",
+          "score": 0.99498743710662
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 30182,
+        "output_tokens": 4847,
+        "attempts": 1,
+        "latency_ms": 1162
+      }
+    },
+    {
+      "id": "credential_access_token",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 31,
+          "end": 54,
+          "subtype": "ACCESS_TOKEN",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 31,
+          "end": 54,
+          "subtype": "ACCESS_TOKEN",
+          "category": "CREDENTIAL",
+          "score": 0.9009994450608724
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 23571,
+        "output_tokens": 3793,
+        "attempts": 1,
+        "latency_ms": 705
+      }
+    },
+    {
+      "id": "credential_refresh_token",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 20,
+          "end": 34,
+          "subtype": "REFRESH_TOKEN",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 20,
+          "end": 34,
+          "subtype": "REFRESH_TOKEN",
+          "category": "CREDENTIAL",
+          "score": 0.9899494936611666
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 26873,
+        "output_tokens": 4337,
+        "attempts": 1,
+        "latency_ms": 458
+      }
+    },
+    {
+      "id": "credential_session_token",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 28,
+          "end": 44,
+          "subtype": "SESSION_TOKEN",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 28,
+          "end": 44,
+          "subtype": "SESSION_TOKEN",
+          "category": "CREDENTIAL",
+          "score": 0.9746794344808963
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 6,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 20249,
+        "output_tokens": 3253,
+        "attempts": 1,
+        "latency_ms": 763
+      }
+    },
+    {
+      "id": "credential_jwt",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 34,
+          "end": 96,
+          "subtype": "JWT",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 34,
+          "end": 96,
+          "subtype": "JWT",
+          "category": "CREDENTIAL",
+          "score": 0.99498743710662
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 5,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 16991,
+        "output_tokens": 2691,
+        "attempts": 1,
+        "latency_ms": 480
+      }
+    },
+    {
+      "id": "credential_private_key",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 39,
+          "end": 71,
+          "subtype": "PRIVATE_KEY",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 39,
+          "end": 71,
+          "subtype": "PRIVATE_KEY",
+          "category": "CREDENTIAL",
+          "score": 0.9848857801796105
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 23610,
+        "output_tokens": 3797,
+        "attempts": 1,
+        "latency_ms": 547
+      }
+    },
+    {
+      "id": "credential_ssh_private_key",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 36,
+          "end": 75,
+          "subtype": "SSH_PRIVATE_KEY",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 36,
+          "end": 75,
+          "subtype": "SSH_PRIVATE_KEY",
+          "category": "CREDENTIAL",
+          "score": 0.9649870465451854
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 23588,
+        "output_tokens": 3798,
+        "attempts": 1,
+        "latency_ms": 515
+      }
+    },
+    {
+      "id": "credential_database_credential",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 24,
+          "end": 44,
+          "subtype": "DATABASE_CREDENTIAL",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 24,
+          "end": 44,
+          "subtype": "DATABASE_CREDENTIAL",
+          "category": "CREDENTIAL",
+          "score": 0.9899494936611666
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 6,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 20251,
+        "output_tokens": 3249,
+        "attempts": 1,
+        "latency_ms": 1325
+      }
+    },
+    {
+      "id": "credential_connection_string",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 29,
+          "end": 82,
+          "subtype": "CONNECTION_STRING",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 29,
+          "end": 82,
+          "subtype": "CONNECTION_STRING",
+          "category": "CREDENTIAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 5,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 16964,
+        "output_tokens": 2707,
+        "attempts": 1,
+        "latency_ms": 451
+      }
+    },
+    {
+      "id": "financial_credit_card",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 21,
+          "end": 40,
+          "subtype": "CREDIT_CARD",
+          "category": "FINANCIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 21,
+          "end": 40,
+          "subtype": "CREDIT_CARD",
+          "category": "FINANCIAL",
+          "score": 0.9395211546314431
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 11,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 36830,
+        "output_tokens": 5954,
+        "attempts": 1,
+        "latency_ms": 1605
+      }
+    },
+    {
+      "id": "financial_cvv",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 30,
+          "end": 33,
+          "subtype": "CVV",
+          "category": "FINANCIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 30,
+          "end": 33,
+          "subtype": "CVV",
+          "category": "FINANCIAL",
+          "score": 0.7754998388136518
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 6,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 20240,
+        "output_tokens": 3239,
+        "attempts": 1,
+        "latency_ms": 1493
+      }
+    },
+    {
+      "id": "financial_bank_account",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 37,
+          "end": 49,
+          "subtype": "BANK_ACCOUNT",
+          "category": "FINANCIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 37,
+          "end": 49,
+          "subtype": "BANK_ACCOUNT",
+          "category": "FINANCIAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 23570,
+        "output_tokens": 3792,
+        "attempts": 1,
+        "latency_ms": 683
+      }
+    },
+    {
+      "id": "financial_routing_number",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 31,
+          "end": 40,
+          "subtype": "ROUTING_NUMBER",
+          "category": "FINANCIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 31,
+          "end": 40,
+          "subtype": "ROUTING_NUMBER",
+          "category": "FINANCIAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 6,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 20253,
+        "output_tokens": 3257,
+        "attempts": 1,
+        "latency_ms": 698
+      }
+    },
+    {
+      "id": "financial_iban",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 26,
+          "end": 48,
+          "subtype": "IBAN",
+          "category": "FINANCIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 26,
+          "end": 48,
+          "subtype": "IBAN",
+          "category": "FINANCIAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 6,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 20271,
+        "output_tokens": 3247,
+        "attempts": 1,
+        "latency_ms": 713
+      }
+    },
+    {
+      "id": "financial_swift_bic",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 35,
+          "end": 46,
+          "subtype": "SWIFT_BIC",
+          "category": "FINANCIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 35,
+          "end": 46,
+          "subtype": "SWIFT_BIC",
+          "category": "FINANCIAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 23561,
+        "output_tokens": 3802,
+        "attempts": 1,
+        "latency_ms": 490
+      }
+    },
+    {
+      "id": "financial_digital_payment_id",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 39,
+          "end": 48,
+          "subtype": "DIGITAL_PAYMENT_ID",
+          "category": "FINANCIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 39,
+          "end": 48,
+          "subtype": "DIGITAL_PAYMENT_ID",
+          "category": "FINANCIAL",
+          "score": 0.99498743710662
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 26867,
+        "output_tokens": 4307,
+        "attempts": 1,
+        "latency_ms": 672
+      }
+    },
+    {
+      "id": "health_medical_record_id",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 46,
+          "end": 56,
+          "subtype": "MEDICAL_RECORD_ID",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 46,
+          "end": 56,
+          "subtype": "MEDICAL_RECORD_ID",
+          "category": "HEALTH",
+          "score": 0.99498743710662
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 30187,
+        "output_tokens": 4876,
+        "attempts": 1,
+        "latency_ms": 1066
+      }
+    },
+    {
+      "id": "health_plan_id",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 39,
+          "end": 48,
+          "subtype": "HEALTH_PLAN_ID",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 39,
+          "end": 48,
+          "subtype": "HEALTH_PLAN_ID",
+          "category": "HEALTH",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 23563,
+        "output_tokens": 3794,
+        "attempts": 1,
+        "latency_ms": 447
+      }
+    },
+    {
+      "id": "health_provider_id",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 49,
+          "end": 59,
+          "subtype": "HEALTHCARE_PROVIDER_ID",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 49,
+          "end": 59,
+          "subtype": "HEALTHCARE_PROVIDER_ID",
+          "category": "HEALTH",
+          "score": 0.99
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 26882,
+        "output_tokens": 4340,
+        "attempts": 1,
+        "latency_ms": 776
+      }
+    },
+    {
+      "id": "health_diagnosis",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 24,
+          "end": 39,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 24,
+          "end": 39,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.6491532946846993
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 30178,
+        "output_tokens": 4853,
+        "attempts": 1,
+        "latency_ms": 812
+      }
+    },
+    {
+      "id": "health_medication",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 28,
+          "end": 56,
+          "subtype": "MEDICATION",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 28,
+          "end": 56,
+          "subtype": "MEDICATION",
+          "category": "HEALTH",
+          "score": 0.6324555320336759
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 30183,
+        "output_tokens": 4851,
+        "attempts": 1,
+        "latency_ms": 863
+      }
+    },
+    {
+      "id": "health_procedure",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 2,
+      "strict": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 22,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 22,
+          "end": 30,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH",
+          "score": 0.7256031973468695
+        },
+        {
+          "start": 38,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH",
+          "score": 0.7511990415329348
+        }
+      ],
+      "expected": [
+        {
+          "start": 22,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 22,
+          "end": 30,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH",
+          "score": 0.7256031973468695
+        },
+        {
+          "start": 38,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH",
+          "score": 0.7511990415329348
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 30179,
+        "output_tokens": 4842,
+        "attempts": 1,
+        "latency_ms": 876
+      }
+    },
+    {
+      "id": "health_medical_history",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 2,
+      "strict": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 1
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 31,
+          "end": 37,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.9649870465451854
+        },
+        {
+          "start": 48,
+          "end": 54,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.8342661445845685
+        }
+      ],
+      "expected": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 31,
+          "end": 37,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.9649870465451854
+        },
+        {
+          "start": 48,
+          "end": 54,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.8342661445845685
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 26864,
+        "output_tokens": 4304,
+        "attempts": 1,
+        "latency_ms": 982
+      }
+    },
+    {
+      "id": "digital_ip_address",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 52,
+          "end": 64,
+          "subtype": "IP_ADDRESS",
+          "category": "DIGITAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 52,
+          "end": 64,
+          "subtype": "IP_ADDRESS",
+          "category": "DIGITAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 26887,
+        "output_tokens": 4306,
+        "attempts": 1,
+        "latency_ms": 730
+      }
+    },
+    {
+      "id": "digital_mac_address",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 40,
+          "end": 57,
+          "subtype": "MAC_ADDRESS",
+          "category": "DIGITAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 40,
+          "end": 57,
+          "subtype": "MAC_ADDRESS",
+          "category": "DIGITAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 23580,
+        "output_tokens": 3792,
+        "attempts": 1,
+        "latency_ms": 435
+      }
+    },
+    {
+      "id": "digital_device_id",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 44,
+          "end": 59,
+          "subtype": "DEVICE_ID",
+          "category": "DIGITAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 44,
+          "end": 59,
+          "subtype": "DEVICE_ID",
+          "category": "DIGITAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 23565,
+        "output_tokens": 3796,
+        "attempts": 1,
+        "latency_ms": 490
+      }
+    },
+    {
+      "id": "digital_imei",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 20,
+          "end": 35,
+          "subtype": "IMEI",
+          "category": "DIGITAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 20,
+          "end": 35,
+          "subtype": "IMEI",
+          "category": "DIGITAL",
+          "score": 0.99498743710662
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 5,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 16955,
+        "output_tokens": 2699,
+        "attempts": 1,
+        "latency_ms": 409
+      }
+    },
+    {
+      "id": "digital_username",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 33,
+          "end": 42,
+          "subtype": "USERNAME",
+          "category": "DIGITAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 33,
+          "end": 42,
+          "subtype": "USERNAME",
+          "category": "DIGITAL",
+          "score": 0.99498743710662
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 6,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 20243,
+        "output_tokens": 3248,
+        "attempts": 1,
+        "latency_ms": 514
+      }
+    },
+    {
+      "id": "digital_account_id",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 35,
+          "end": 48,
+          "subtype": "ACCOUNT_ID",
+          "category": "DIGITAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 35,
+          "end": 48,
+          "subtype": "ACCOUNT_ID",
+          "category": "DIGITAL",
+          "score": 0.99498743710662
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 6,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 20249,
+        "output_tokens": 3255,
+        "attempts": 1,
+        "latency_ms": 767
+      }
+    },
+    {
+      "id": "digital_sensitive_url",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 34,
+          "end": 86,
+          "subtype": "URL",
+          "category": "DIGITAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 34,
+          "end": 86,
+          "subtype": "URL",
+          "category": "DIGITAL",
+          "score": 0.8944271909999159
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 23583,
+        "output_tokens": 3791,
+        "attempts": 1,
+        "latency_ms": 745
+      }
+    },
+    {
+      "id": "mixed_identity",
+      "repeat": 0,
+      "expected_count": 3,
+      "predicted_count": 3,
+      "strict": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 0,
+          "end": 11,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY"
+        },
+        {
+          "start": 30,
+          "end": 54,
+          "subtype": "EMAIL",
+          "category": "IDENTITY"
+        },
+        {
+          "start": 58,
+          "end": 73,
+          "subtype": "PHONE",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 0,
+          "end": 11,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY",
+          "score": 0.9695359714832658
+        },
+        {
+          "start": 30,
+          "end": 54,
+          "subtype": "EMAIL",
+          "category": "IDENTITY",
+          "score": 0.99498743710662
+        },
+        {
+          "start": 58,
+          "end": 73,
+          "subtype": "PHONE",
+          "category": "IDENTITY",
+          "score": 0.9243376006633074
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 30216,
+        "output_tokens": 4844,
+        "attempts": 1,
+        "latency_ms": 781
+      }
+    },
+    {
+      "id": "mixed_connection_precedence",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 37,
+          "end": 90,
+          "subtype": "CONNECTION_STRING",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 37,
+          "end": 90,
+          "subtype": "CONNECTION_STRING",
+          "category": "CREDENTIAL",
+          "score": 0.99498743710662
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 23586,
+        "output_tokens": 3791,
+        "attempts": 1,
+        "latency_ms": 756
+      }
+    },
+    {
+      "id": "mixed_financial",
+      "repeat": 0,
+      "expected_count": 2,
+      "predicted_count": 2,
+      "strict": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 32,
+          "end": 51,
+          "subtype": "CREDIT_CARD",
+          "category": "FINANCIAL"
+        },
+        {
+          "start": 60,
+          "end": 63,
+          "subtype": "CVV",
+          "category": "FINANCIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 32,
+          "end": 51,
+          "subtype": "CREDIT_CARD",
+          "category": "FINANCIAL",
+          "score": 0.9143303560529968
+        },
+        {
+          "start": 60,
+          "end": 63,
+          "subtype": "CVV",
+          "category": "FINANCIAL",
+          "score": 0.954358423235212
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 12,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 40156,
+        "output_tokens": 6499,
+        "attempts": 1,
+        "latency_ms": 1094
+      }
+    },
+    {
+      "id": "mixed_health",
+      "repeat": 0,
+      "expected_count": 3,
+      "predicted_count": 3,
+      "strict": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 7,
+          "end": 17,
+          "subtype": "MEDICAL_RECORD_ID",
+          "category": "HEALTH"
+        },
+        {
+          "start": 24,
+          "end": 36,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH"
+        },
+        {
+          "start": 50,
+          "end": 65,
+          "subtype": "MEDICATION",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 7,
+          "end": 17,
+          "subtype": "MEDICAL_RECORD_ID",
+          "category": "HEALTH",
+          "score": 0.9848857801796105
+        },
+        {
+          "start": 24,
+          "end": 36,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.9848857801796105
+        },
+        {
+          "start": 50,
+          "end": 65,
+          "subtype": "MEDICATION",
+          "category": "HEALTH",
+          "score": 0.8774964387392122
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 30198,
+        "output_tokens": 4871,
+        "attempts": 1,
+        "latency_ms": 922
+      }
+    },
+    {
+      "id": "negative_field_names",
+      "repeat": 0,
+      "expected_count": 0,
+      "predicted_count": 0,
+      "strict": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [],
+      "predicted": [],
+      "meta": {
+        "profile": "latency",
+        "units": 12,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 40130,
+        "output_tokens": 6455,
+        "attempts": 1,
+        "latency_ms": 1524
+      }
+    },
+    {
+      "id": "negative_capitalized_words",
+      "repeat": 0,
+      "expected_count": 0,
+      "predicted_count": 0,
+      "strict": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [],
+      "predicted": [],
+      "meta": {
+        "profile": "latency",
+        "units": 11,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 36807,
+        "output_tokens": 5929,
+        "attempts": 1,
+        "latency_ms": 1012
+      }
+    },
+    {
+      "id": "adversarial_instruction",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL",
+          "score": 0.6717142249498665
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 14,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 46777,
+        "output_tokens": 7591,
+        "attempts": 1,
+        "latency_ms": 1458
+      }
+    },
+    {
+      "id": "multilingual_identity",
+      "repeat": 0,
+      "expected_count": 2,
+      "predicted_count": 2,
+      "strict": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 14,
+          "end": 23,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "subtype": "EMAIL",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 14,
+          "end": 23,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY",
+          "score": 0.9695359714832658
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "subtype": "EMAIL",
+          "category": "IDENTITY",
+          "score": 0.9848857801796105
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 10,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 33528,
+        "output_tokens": 5370,
+        "attempts": 1,
+        "latency_ms": 895
+      }
+    },
+    {
+      "id": "mixed_digital",
+      "repeat": 0,
+      "expected_count": 3,
+      "predicted_count": 3,
+      "strict": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 1
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "IMEI",
+          "category": "DIGITAL"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "DEVICE_ID",
+          "category": "DIGITAL",
+          "score": 0.9273618495495703
+        }
+      ],
+      "expected": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "IMEI",
+          "category": "DIGITAL"
+        },
+        {
+          "start": 38,
+          "end": 49,
+          "subtype": "IP_ADDRESS",
+          "category": "DIGITAL"
+        },
+        {
+          "start": 64,
+          "end": 72,
+          "subtype": "USERNAME",
+          "category": "DIGITAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "DEVICE_ID",
+          "category": "DIGITAL",
+          "score": 0.9273618495495703
+        },
+        {
+          "start": 38,
+          "end": 49,
+          "subtype": "IP_ADDRESS",
+          "category": "DIGITAL",
+          "score": 0.9486832980505138
+        },
+        {
+          "start": 64,
+          "end": 72,
+          "subtype": "USERNAME",
+          "category": "DIGITAL",
+          "score": 0.99498743710662
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 26911,
+        "output_tokens": 4334,
+        "attempts": 1,
+        "latency_ms": 707
+      }
+    },
+    {
+      "id": "repeated_person",
+      "repeat": 0,
+      "expected_count": 2,
+      "predicted_count": 2,
+      "strict": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 0,
+          "end": 8,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 0,
+          "end": 8,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY",
+          "score": 0.9433981132056604
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY",
+          "score": 0.8888194417315589
+        }
+      ],
+      "meta": {
+        "profile": "latency",
+        "units": 11,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 36806,
+        "output_tokens": 5922,
+        "attempts": 1,
+        "latency_ms": 985
+      }
+    }
+  ]
+}

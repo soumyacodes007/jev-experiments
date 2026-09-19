@@ -1,0 +1,211 @@
+{
+  "generated_at": "2026-09-19T14:50:44.267Z",
+  "started_at": "2026-09-19T14:50:40.311Z",
+  "dataset": "C:\\Users\\soumy\\Desktop\\jev-halo-prism\\evals\\prism-50.json",
+  "cases": 3,
+  "repeats": 1,
+  "runs": 3,
+  "profile": "economy",
+  "model": "jev-1.13.0",
+  "taxonomy_version": "1.0.0",
+  "wall_ms": 3940,
+  "summary": {
+    "errors": 0,
+    "exact_case_passes": 3,
+    "exact_case_accuracy": 1,
+    "strict": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "relaxed": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "masking_exact_rate": 1,
+    "input_tokens": 14162,
+    "output_tokens": 1886,
+    "api_calls": 6,
+    "estimated_cost_usd": 0.0005948040000000001,
+    "latency_ms": {
+      "p50": 2052,
+      "p95": 3940,
+      "p99": 3940,
+      "mean": 2243.3333333333335
+    }
+  },
+  "per_subtype": {
+    "EMAIL": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PERSON_NAME": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PHONE": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    }
+  },
+  "failures": [],
+  "runs_detail": [
+    {
+      "id": "identity_person_name",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 26,
+          "end": 38,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 26,
+          "end": 38,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY",
+          "score": 0.9539392014169457
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 5789,
+        "output_tokens": 807,
+        "attempts": 2,
+        "latency_ms": 3940
+      }
+    },
+    {
+      "id": "identity_email",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 35,
+          "end": 60,
+          "subtype": "EMAIL",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 35,
+          "end": 60,
+          "subtype": "EMAIL",
+          "category": "IDENTITY",
+          "score": 0.7874007874011811
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 4409,
+        "output_tokens": 573,
+        "attempts": 2,
+        "latency_ms": 2052
+      }
+    },
+    {
+      "id": "identity_phone",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 26,
+          "end": 41,
+          "subtype": "PHONE",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 26,
+          "end": 41,
+          "subtype": "PHONE",
+          "category": "IDENTITY",
+          "score": 0.8944271909999159
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 6,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 3964,
+        "output_tokens": 506,
+        "attempts": 2,
+        "latency_ms": 738
+      }
+    }
+  ]
+}

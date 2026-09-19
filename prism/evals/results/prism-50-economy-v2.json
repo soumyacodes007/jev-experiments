@@ -1,0 +1,3295 @@
+{
+  "generated_at": "2026-09-19T14:53:37.062Z",
+  "started_at": "2026-09-19T14:53:25.387Z",
+  "dataset": "C:\\Users\\soumy\\Desktop\\jev-halo-prism\\evals\\prism-50.json",
+  "cases": 50,
+  "repeats": 1,
+  "runs": 50,
+  "profile": "economy",
+  "model": "jev-1.13.0",
+  "taxonomy_version": "1.0.0",
+  "wall_ms": 11660,
+  "summary": {
+    "errors": 0,
+    "exact_case_passes": 44,
+    "exact_case_accuracy": 0.88,
+    "strict": {
+      "tp": 51,
+      "fp": 8,
+      "fn": 6,
+      "precision": 0.864406779661017,
+      "recall": 0.8947368421052632,
+      "f1": 0.8793103448275862
+    },
+    "relaxed": {
+      "tp": 55,
+      "fp": 4,
+      "fn": 2,
+      "precision": 0.9322033898305084,
+      "recall": 0.9649122807017544,
+      "f1": 0.9482758620689654
+    },
+    "masking_exact_rate": 0.88,
+    "input_tokens": 517314,
+    "output_tokens": 42294,
+    "api_calls": 98,
+    "estimated_cost_usd": 0.021727188,
+    "latency_ms": {
+      "p50": 788,
+      "p95": 2198,
+      "p99": 2892,
+      "mean": 917.3
+    }
+  },
+  "per_subtype": {
+    "ACCESS_TOKEN": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "ACCOUNT_ID": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "ADDRESS": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0
+    },
+    "API_KEY": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "BANK_ACCOUNT": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "CONNECTION_STRING": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "CREDIT_CARD": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "CVV": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "DATABASE_CREDENTIAL": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "DATE_OF_BIRTH": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "DEVICE_ID": {
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1,
+      "f1": 0.6666666666666666
+    },
+    "DIAGNOSIS": {
+      "tp": 1,
+      "fp": 3,
+      "fn": 1,
+      "precision": 0.25,
+      "recall": 0.5,
+      "f1": 0.3333333333333333
+    },
+    "DIGITAL_PAYMENT_ID": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "DRIVER_LICENSE": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "EMAIL": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "GOVERNMENT_ID": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "HEALTH_PLAN_ID": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "HEALTHCARE_PROVIDER_ID": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "IBAN": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "IMEI": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    "IP_ADDRESS": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "JWT": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "MAC_ADDRESS": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "MEDICAL_HISTORY": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1,
+      "recall": 0,
+      "f1": 0
+    },
+    "MEDICAL_RECORD_ID": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "MEDICATION": {
+      "tp": 1,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    "PASSPORT": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PASSWORD": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PERSON_NAME": {
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PHONE": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PRIVATE_KEY": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "PROCEDURE": {
+      "tp": 0,
+      "fp": 2,
+      "fn": 1,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0
+    },
+    "REFRESH_TOKEN": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "ROUTING_NUMBER": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "SESSION_TOKEN": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "SSH_PRIVATE_KEY": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "SWIFT_BIC": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "TAX_ID": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "URL": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "USERNAME": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    }
+  },
+  "failures": [
+    {
+      "id": "identity_address",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 24,
+          "end": 47,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 24,
+          "end": 26,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY",
+          "score": 0.806225774829855
+        }
+      ],
+      "expected": [
+        {
+          "start": 24,
+          "end": 47,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 24,
+          "end": 26,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY",
+          "score": 0.806225774829855
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 10,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 14066,
+        "output_tokens": 1338,
+        "attempts": 2,
+        "latency_ms": 2118
+      }
+    },
+    {
+      "id": "health_diagnosis",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 24,
+          "end": 39,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 29,
+          "end": 39,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.754983443527075
+        }
+      ],
+      "expected": [
+        {
+          "start": 24,
+          "end": 39,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 29,
+          "end": 39,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.754983443527075
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 11974,
+        "output_tokens": 1043,
+        "attempts": 2,
+        "latency_ms": 788
+      }
+    },
+    {
+      "id": "health_medication",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 28,
+          "end": 44,
+          "subtype": "MEDICATION",
+          "category": "HEALTH"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 28,
+          "end": 56,
+          "subtype": "MEDICATION",
+          "category": "HEALTH",
+          "score": 0.7280109889280518
+        }
+      ],
+      "expected": [
+        {
+          "start": 28,
+          "end": 44,
+          "subtype": "MEDICATION",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 28,
+          "end": 56,
+          "subtype": "MEDICATION",
+          "category": "HEALTH",
+          "score": 0.7280109889280518
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 12779,
+        "output_tokens": 1226,
+        "attempts": 2,
+        "latency_ms": 728
+      }
+    },
+    {
+      "id": "health_procedure",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 2,
+      "strict": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 22,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 22,
+          "end": 30,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH",
+          "score": 0.7834538914320357
+        },
+        {
+          "start": 38,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH",
+          "score": 0.7834538914320357
+        }
+      ],
+      "expected": [
+        {
+          "start": 22,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 22,
+          "end": 30,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH",
+          "score": 0.7834538914320357
+        },
+        {
+          "start": 38,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH",
+          "score": 0.7834538914320357
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 12375,
+        "output_tokens": 1130,
+        "attempts": 2,
+        "latency_ms": 836
+      }
+    },
+    {
+      "id": "health_medical_history",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 2,
+      "strict": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 1
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 31,
+          "end": 37,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.9126883367283708
+        },
+        {
+          "start": 48,
+          "end": 54,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.8270429251254133
+        }
+      ],
+      "expected": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 31,
+          "end": 37,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.9126883367283708
+        },
+        {
+          "start": 48,
+          "end": 54,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.8270429251254133
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 10841,
+        "output_tokens": 957,
+        "attempts": 2,
+        "latency_ms": 826
+      }
+    },
+    {
+      "id": "mixed_digital",
+      "repeat": 0,
+      "expected_count": 3,
+      "predicted_count": 3,
+      "strict": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 1
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "IMEI",
+          "category": "DIGITAL"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "DEVICE_ID",
+          "category": "DIGITAL",
+          "score": 0.916515138991168
+        }
+      ],
+      "expected": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "IMEI",
+          "category": "DIGITAL"
+        },
+        {
+          "start": 38,
+          "end": 49,
+          "subtype": "IP_ADDRESS",
+          "category": "DIGITAL"
+        },
+        {
+          "start": 64,
+          "end": 72,
+          "subtype": "USERNAME",
+          "category": "DIGITAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "DEVICE_ID",
+          "category": "DIGITAL",
+          "score": 0.916515138991168
+        },
+        {
+          "start": 38,
+          "end": 49,
+          "subtype": "IP_ADDRESS",
+          "category": "DIGITAL",
+          "score": 1
+        },
+        {
+          "start": 64,
+          "end": 72,
+          "subtype": "USERNAME",
+          "category": "DIGITAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 10860,
+        "output_tokens": 907,
+        "attempts": 2,
+        "latency_ms": 785
+      }
+    }
+  ],
+  "runs_detail": [
+    {
+      "id": "identity_person_name",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 26,
+          "end": 38,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 26,
+          "end": 38,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY",
+          "score": 0.9797958971132712
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 11639,
+        "output_tokens": 969,
+        "attempts": 2,
+        "latency_ms": 2198
+      }
+    },
+    {
+      "id": "identity_email",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 35,
+          "end": 60,
+          "subtype": "EMAIL",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 35,
+          "end": 60,
+          "subtype": "EMAIL",
+          "category": "IDENTITY",
+          "score": 0.99498743710662
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 8959,
+        "output_tokens": 699,
+        "attempts": 2,
+        "latency_ms": 2448
+      }
+    },
+    {
+      "id": "identity_phone",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 26,
+          "end": 41,
+          "subtype": "PHONE",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 26,
+          "end": 41,
+          "subtype": "PHONE",
+          "category": "IDENTITY",
+          "score": 0.9591663046625439
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 6,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 7864,
+        "output_tokens": 614,
+        "attempts": 2,
+        "latency_ms": 2892
+      }
+    },
+    {
+      "id": "identity_address",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 24,
+          "end": 47,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 24,
+          "end": 26,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY",
+          "score": 0.806225774829855
+        }
+      ],
+      "expected": [
+        {
+          "start": 24,
+          "end": 47,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 24,
+          "end": 26,
+          "subtype": "ADDRESS",
+          "category": "IDENTITY",
+          "score": 0.806225774829855
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 10,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 14066,
+        "output_tokens": 1338,
+        "attempts": 2,
+        "latency_ms": 2118
+      }
+    },
+    {
+      "id": "identity_dob",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 31,
+          "end": 47,
+          "subtype": "DATE_OF_BIRTH",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 31,
+          "end": 47,
+          "subtype": "DATE_OF_BIRTH",
+          "category": "IDENTITY",
+          "score": 0.9110433579144299
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 12085,
+        "output_tokens": 1074,
+        "attempts": 2,
+        "latency_ms": 992
+      }
+    },
+    {
+      "id": "identity_passport",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 23,
+          "end": 31,
+          "subtype": "PASSPORT",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 23,
+          "end": 31,
+          "subtype": "PASSPORT",
+          "category": "IDENTITY",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 11230,
+        "output_tokens": 871,
+        "attempts": 2,
+        "latency_ms": 814
+      }
+    },
+    {
+      "id": "identity_driver_license",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 35,
+          "end": 51,
+          "subtype": "DRIVER_LICENSE",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 35,
+          "end": 51,
+          "subtype": "DRIVER_LICENSE",
+          "category": "IDENTITY",
+          "score": 0.99498743710662
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 6,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 7865,
+        "output_tokens": 616,
+        "attempts": 2,
+        "latency_ms": 765
+      }
+    },
+    {
+      "id": "identity_government_id",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 49,
+          "end": 60,
+          "subtype": "GOVERNMENT_ID",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 49,
+          "end": 60,
+          "subtype": "GOVERNMENT_ID",
+          "category": "IDENTITY",
+          "score": 0.7280109889280518
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 10112,
+        "output_tokens": 788,
+        "attempts": 2,
+        "latency_ms": 805
+      }
+    },
+    {
+      "id": "identity_tax_id",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 19,
+          "end": 29,
+          "subtype": "TAX_ID",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 19,
+          "end": 29,
+          "subtype": "TAX_ID",
+          "category": "IDENTITY",
+          "score": 0.9899494936611666
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 8961,
+        "output_tokens": 701,
+        "attempts": 2,
+        "latency_ms": 971
+      }
+    },
+    {
+      "id": "credential_api_key",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 43,
+          "end": 65,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 43,
+          "end": 65,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL",
+          "score": 0.99498743710662
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 10176,
+        "output_tokens": 796,
+        "attempts": 2,
+        "latency_ms": 792
+      }
+    },
+    {
+      "id": "credential_password",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 26,
+          "end": 38,
+          "subtype": "PASSWORD",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 26,
+          "end": 38,
+          "subtype": "PASSWORD",
+          "category": "CREDENTIAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 11293,
+        "output_tokens": 880,
+        "attempts": 2,
+        "latency_ms": 708
+      }
+    },
+    {
+      "id": "credential_access_token",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 31,
+          "end": 54,
+          "subtype": "ACCESS_TOKEN",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 31,
+          "end": 54,
+          "subtype": "ACCESS_TOKEN",
+          "category": "CREDENTIAL",
+          "score": 0.895488693395958
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 9054,
+        "output_tokens": 711,
+        "attempts": 2,
+        "latency_ms": 754
+      }
+    },
+    {
+      "id": "credential_refresh_token",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 20,
+          "end": 34,
+          "subtype": "REFRESH_TOKEN",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 20,
+          "end": 34,
+          "subtype": "REFRESH_TOKEN",
+          "category": "CREDENTIAL",
+          "score": 0.99498743710662
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 10168,
+        "output_tokens": 797,
+        "attempts": 2,
+        "latency_ms": 957
+      }
+    },
+    {
+      "id": "credential_session_token",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 28,
+          "end": 44,
+          "subtype": "SESSION_TOKEN",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 28,
+          "end": 44,
+          "subtype": "SESSION_TOKEN",
+          "category": "CREDENTIAL",
+          "score": 0.9848857801796105
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 6,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 7904,
+        "output_tokens": 626,
+        "attempts": 2,
+        "latency_ms": 687
+      }
+    },
+    {
+      "id": "credential_jwt",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 34,
+          "end": 96,
+          "subtype": "JWT",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 34,
+          "end": 96,
+          "subtype": "JWT",
+          "category": "CREDENTIAL",
+          "score": 0.99498743710662
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 5,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 6880,
+        "output_tokens": 540,
+        "attempts": 2,
+        "latency_ms": 761
+      }
+    },
+    {
+      "id": "credential_private_key",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 39,
+          "end": 71,
+          "subtype": "PRIVATE_KEY",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 39,
+          "end": 71,
+          "subtype": "PRIVATE_KEY",
+          "category": "CREDENTIAL",
+          "score": 0.9848857801796105
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 9130,
+        "output_tokens": 711,
+        "attempts": 2,
+        "latency_ms": 882
+      }
+    },
+    {
+      "id": "credential_ssh_private_key",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 36,
+          "end": 75,
+          "subtype": "SSH_PRIVATE_KEY",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 36,
+          "end": 75,
+          "subtype": "SSH_PRIVATE_KEY",
+          "category": "CREDENTIAL",
+          "score": 0.9799489782636644
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 9089,
+        "output_tokens": 712,
+        "attempts": 2,
+        "latency_ms": 945
+      }
+    },
+    {
+      "id": "credential_database_credential",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 24,
+          "end": 44,
+          "subtype": "DATABASE_CREDENTIAL",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 24,
+          "end": 44,
+          "subtype": "DATABASE_CREDENTIAL",
+          "category": "CREDENTIAL",
+          "score": 0.99498743710662
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 6,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 7908,
+        "output_tokens": 629,
+        "attempts": 2,
+        "latency_ms": 673
+      }
+    },
+    {
+      "id": "credential_connection_string",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 29,
+          "end": 82,
+          "subtype": "CONNECTION_STRING",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 29,
+          "end": 82,
+          "subtype": "CONNECTION_STRING",
+          "category": "CREDENTIAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 5,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 6825,
+        "output_tokens": 544,
+        "attempts": 2,
+        "latency_ms": 820
+      }
+    },
+    {
+      "id": "financial_credit_card",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 21,
+          "end": 40,
+          "subtype": "CREDIT_CARD",
+          "category": "FINANCIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 21,
+          "end": 40,
+          "subtype": "CREDIT_CARD",
+          "category": "FINANCIAL",
+          "score": 0.9591663046625439
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 11,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 14562,
+        "output_tokens": 1299,
+        "attempts": 2,
+        "latency_ms": 691
+      }
+    },
+    {
+      "id": "financial_cvv",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 30,
+          "end": 33,
+          "subtype": "CVV",
+          "category": "FINANCIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 30,
+          "end": 33,
+          "subtype": "CVV",
+          "category": "FINANCIAL",
+          "score": 0.8306623862918074
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 6,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 7753,
+        "output_tokens": 603,
+        "attempts": 2,
+        "latency_ms": 746
+      }
+    },
+    {
+      "id": "financial_bank_account",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 37,
+          "end": 49,
+          "subtype": "BANK_ACCOUNT",
+          "category": "FINANCIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 37,
+          "end": 49,
+          "subtype": "BANK_ACCOUNT",
+          "category": "FINANCIAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 8921,
+        "output_tokens": 688,
+        "attempts": 2,
+        "latency_ms": 781
+      }
+    },
+    {
+      "id": "financial_routing_number",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 31,
+          "end": 40,
+          "subtype": "ROUTING_NUMBER",
+          "category": "FINANCIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 31,
+          "end": 40,
+          "subtype": "ROUTING_NUMBER",
+          "category": "FINANCIAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 6,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 7778,
+        "output_tokens": 605,
+        "attempts": 2,
+        "latency_ms": 678
+      }
+    },
+    {
+      "id": "financial_iban",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 26,
+          "end": 48,
+          "subtype": "IBAN",
+          "category": "FINANCIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 26,
+          "end": 48,
+          "subtype": "IBAN",
+          "category": "FINANCIAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 6,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 7814,
+        "output_tokens": 603,
+        "attempts": 2,
+        "latency_ms": 723
+      }
+    },
+    {
+      "id": "financial_swift_bic",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 35,
+          "end": 46,
+          "subtype": "SWIFT_BIC",
+          "category": "FINANCIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 35,
+          "end": 46,
+          "subtype": "SWIFT_BIC",
+          "category": "FINANCIAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 8902,
+        "output_tokens": 690,
+        "attempts": 2,
+        "latency_ms": 717
+      }
+    },
+    {
+      "id": "financial_digital_payment_id",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 39,
+          "end": 48,
+          "subtype": "DIGITAL_PAYMENT_ID",
+          "category": "FINANCIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 39,
+          "end": 48,
+          "subtype": "DIGITAL_PAYMENT_ID",
+          "category": "FINANCIAL",
+          "score": 0.99498743710662
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 10022,
+        "output_tokens": 775,
+        "attempts": 2,
+        "latency_ms": 732
+      }
+    },
+    {
+      "id": "health_medical_record_id",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 46,
+          "end": 56,
+          "subtype": "MEDICAL_RECORD_ID",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 46,
+          "end": 56,
+          "subtype": "MEDICAL_RECORD_ID",
+          "category": "HEALTH",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 11201,
+        "output_tokens": 862,
+        "attempts": 2,
+        "latency_ms": 823
+      }
+    },
+    {
+      "id": "health_plan_id",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 39,
+          "end": 48,
+          "subtype": "HEALTH_PLAN_ID",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 39,
+          "end": 48,
+          "subtype": "HEALTH_PLAN_ID",
+          "category": "HEALTH",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 8936,
+        "output_tokens": 692,
+        "attempts": 2,
+        "latency_ms": 761
+      }
+    },
+    {
+      "id": "health_provider_id",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 49,
+          "end": 59,
+          "subtype": "HEALTHCARE_PROVIDER_ID",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 49,
+          "end": 59,
+          "subtype": "HEALTHCARE_PROVIDER_ID",
+          "category": "HEALTH",
+          "score": 0.9899494936611666
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 10079,
+        "output_tokens": 778,
+        "attempts": 2,
+        "latency_ms": 886
+      }
+    },
+    {
+      "id": "health_diagnosis",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 24,
+          "end": 39,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 29,
+          "end": 39,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.754983443527075
+        }
+      ],
+      "expected": [
+        {
+          "start": 24,
+          "end": 39,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 29,
+          "end": 39,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.754983443527075
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 11974,
+        "output_tokens": 1043,
+        "attempts": 2,
+        "latency_ms": 788
+      }
+    },
+    {
+      "id": "health_medication",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 28,
+          "end": 44,
+          "subtype": "MEDICATION",
+          "category": "HEALTH"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 28,
+          "end": 56,
+          "subtype": "MEDICATION",
+          "category": "HEALTH",
+          "score": 0.7280109889280518
+        }
+      ],
+      "expected": [
+        {
+          "start": 28,
+          "end": 44,
+          "subtype": "MEDICATION",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 28,
+          "end": 56,
+          "subtype": "MEDICATION",
+          "category": "HEALTH",
+          "score": 0.7280109889280518
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 12779,
+        "output_tokens": 1226,
+        "attempts": 2,
+        "latency_ms": 728
+      }
+    },
+    {
+      "id": "health_procedure",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 2,
+      "strict": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 22,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 22,
+          "end": 30,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH",
+          "score": 0.7834538914320357
+        },
+        {
+          "start": 38,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH",
+          "score": 0.7834538914320357
+        }
+      ],
+      "expected": [
+        {
+          "start": 22,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 22,
+          "end": 30,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH",
+          "score": 0.7834538914320357
+        },
+        {
+          "start": 38,
+          "end": 52,
+          "subtype": "PROCEDURE",
+          "category": "HEALTH",
+          "score": 0.7834538914320357
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 12375,
+        "output_tokens": 1130,
+        "attempts": 2,
+        "latency_ms": 836
+      }
+    },
+    {
+      "id": "health_medical_history",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 2,
+      "strict": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 1
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 31,
+          "end": 37,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.9126883367283708
+        },
+        {
+          "start": 48,
+          "end": 54,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.8270429251254133
+        }
+      ],
+      "expected": [
+        {
+          "start": 21,
+          "end": 54,
+          "subtype": "MEDICAL_HISTORY",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 31,
+          "end": 37,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.9126883367283708
+        },
+        {
+          "start": 48,
+          "end": 54,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.8270429251254133
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 10841,
+        "output_tokens": 957,
+        "attempts": 2,
+        "latency_ms": 826
+      }
+    },
+    {
+      "id": "digital_ip_address",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 52,
+          "end": 64,
+          "subtype": "IP_ADDRESS",
+          "category": "DIGITAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 52,
+          "end": 64,
+          "subtype": "IP_ADDRESS",
+          "category": "DIGITAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 10063,
+        "output_tokens": 760,
+        "attempts": 2,
+        "latency_ms": 956
+      }
+    },
+    {
+      "id": "digital_mac_address",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 40,
+          "end": 57,
+          "subtype": "MAC_ADDRESS",
+          "category": "DIGITAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 40,
+          "end": 57,
+          "subtype": "MAC_ADDRESS",
+          "category": "DIGITAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 8946,
+        "output_tokens": 675,
+        "attempts": 2,
+        "latency_ms": 829
+      }
+    },
+    {
+      "id": "digital_device_id",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 44,
+          "end": 59,
+          "subtype": "DEVICE_ID",
+          "category": "DIGITAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 44,
+          "end": 59,
+          "subtype": "DEVICE_ID",
+          "category": "DIGITAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 8916,
+        "output_tokens": 675,
+        "attempts": 2,
+        "latency_ms": 723
+      }
+    },
+    {
+      "id": "digital_imei",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 20,
+          "end": 35,
+          "subtype": "IMEI",
+          "category": "DIGITAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 20,
+          "end": 35,
+          "subtype": "IMEI",
+          "category": "DIGITAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 5,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 6678,
+        "output_tokens": 505,
+        "attempts": 2,
+        "latency_ms": 722
+      }
+    },
+    {
+      "id": "digital_username",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 33,
+          "end": 42,
+          "subtype": "USERNAME",
+          "category": "DIGITAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 33,
+          "end": 42,
+          "subtype": "USERNAME",
+          "category": "DIGITAL",
+          "score": 0.99498743710662
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 6,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 7764,
+        "output_tokens": 589,
+        "attempts": 2,
+        "latency_ms": 783
+      }
+    },
+    {
+      "id": "digital_account_id",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 35,
+          "end": 48,
+          "subtype": "ACCOUNT_ID",
+          "category": "DIGITAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 35,
+          "end": 48,
+          "subtype": "ACCOUNT_ID",
+          "category": "DIGITAL",
+          "score": 0.9899494936611666
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 6,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 7776,
+        "output_tokens": 590,
+        "attempts": 2,
+        "latency_ms": 738
+      }
+    },
+    {
+      "id": "digital_sensitive_url",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 34,
+          "end": 86,
+          "subtype": "URL",
+          "category": "DIGITAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 34,
+          "end": 86,
+          "subtype": "URL",
+          "category": "DIGITAL",
+          "score": 0.8602325267042626
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 8952,
+        "output_tokens": 674,
+        "attempts": 2,
+        "latency_ms": 710
+      }
+    },
+    {
+      "id": "mixed_identity",
+      "repeat": 0,
+      "expected_count": 3,
+      "predicted_count": 3,
+      "strict": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 0,
+          "end": 11,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY"
+        },
+        {
+          "start": 30,
+          "end": 54,
+          "subtype": "EMAIL",
+          "category": "IDENTITY"
+        },
+        {
+          "start": 58,
+          "end": 73,
+          "subtype": "PHONE",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 0,
+          "end": 11,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY",
+          "score": 0.9643650760992956
+        },
+        {
+          "start": 30,
+          "end": 54,
+          "subtype": "EMAIL",
+          "category": "IDENTITY",
+          "score": 0.9899494936611666
+        },
+        {
+          "start": 58,
+          "end": 73,
+          "subtype": "PHONE",
+          "category": "IDENTITY",
+          "score": 0.9848857801796105
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 12581,
+        "output_tokens": 1165,
+        "attempts": 2,
+        "latency_ms": 849
+      }
+    },
+    {
+      "id": "mixed_connection_precedence",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 37,
+          "end": 90,
+          "subtype": "CONNECTION_STRING",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 37,
+          "end": 90,
+          "subtype": "CONNECTION_STRING",
+          "category": "CREDENTIAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 7,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 9083,
+        "output_tokens": 714,
+        "attempts": 2,
+        "latency_ms": 732
+      }
+    },
+    {
+      "id": "mixed_financial",
+      "repeat": 0,
+      "expected_count": 2,
+      "predicted_count": 2,
+      "strict": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 32,
+          "end": 51,
+          "subtype": "CREDIT_CARD",
+          "category": "FINANCIAL"
+        },
+        {
+          "start": 60,
+          "end": 63,
+          "subtype": "CVV",
+          "category": "FINANCIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 32,
+          "end": 51,
+          "subtype": "CREDIT_CARD",
+          "category": "FINANCIAL",
+          "score": 0.9486832980505138
+        },
+        {
+          "start": 60,
+          "end": 63,
+          "subtype": "CVV",
+          "category": "FINANCIAL",
+          "score": 0.9899494936611666
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 12,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 16076,
+        "output_tokens": 1474,
+        "attempts": 2,
+        "latency_ms": 853
+      }
+    },
+    {
+      "id": "mixed_health",
+      "repeat": 0,
+      "expected_count": 3,
+      "predicted_count": 3,
+      "strict": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 7,
+          "end": 17,
+          "subtype": "MEDICAL_RECORD_ID",
+          "category": "HEALTH"
+        },
+        {
+          "start": 24,
+          "end": 36,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH"
+        },
+        {
+          "start": 50,
+          "end": 65,
+          "subtype": "MEDICATION",
+          "category": "HEALTH"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 7,
+          "end": 17,
+          "subtype": "MEDICAL_RECORD_ID",
+          "category": "HEALTH",
+          "score": 0.9797958971132712
+        },
+        {
+          "start": 24,
+          "end": 36,
+          "subtype": "DIAGNOSIS",
+          "category": "HEALTH",
+          "score": 0.9748846085563152
+        },
+        {
+          "start": 50,
+          "end": 65,
+          "subtype": "MEDICATION",
+          "category": "HEALTH",
+          "score": 0.7615773105863908
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 9,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 12810,
+        "output_tokens": 1226,
+        "attempts": 2,
+        "latency_ms": 1010
+      }
+    },
+    {
+      "id": "negative_field_names",
+      "repeat": 0,
+      "expected_count": 0,
+      "predicted_count": 0,
+      "strict": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [],
+      "predicted": [],
+      "meta": {
+        "profile": "economy",
+        "units": 12,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 13895,
+        "output_tokens": 1027,
+        "attempts": 1,
+        "latency_ms": 443
+      }
+    },
+    {
+      "id": "negative_capitalized_words",
+      "repeat": 0,
+      "expected_count": 0,
+      "predicted_count": 0,
+      "strict": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [],
+      "predicted": [],
+      "meta": {
+        "profile": "economy",
+        "units": 11,
+        "windows": 1,
+        "api_calls": 1,
+        "input_tokens": 12758,
+        "output_tokens": 940,
+        "attempts": 1,
+        "latency_ms": 532
+      }
+    },
+    {
+      "id": "adversarial_instruction",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL",
+          "score": 0.7348469228349535
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 14,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 16975,
+        "output_tokens": 1315,
+        "attempts": 2,
+        "latency_ms": 880
+      }
+    },
+    {
+      "id": "multilingual_identity",
+      "repeat": 0,
+      "expected_count": 2,
+      "predicted_count": 2,
+      "strict": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 14,
+          "end": 23,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "subtype": "EMAIL",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 14,
+          "end": 23,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY",
+          "score": 0.9746794344808963
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "subtype": "EMAIL",
+          "category": "IDENTITY",
+          "score": 0.9746794344808963
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 10,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 13270,
+        "output_tokens": 1152,
+        "attempts": 2,
+        "latency_ms": 789
+      }
+    },
+    {
+      "id": "mixed_digital",
+      "repeat": 0,
+      "expected_count": 3,
+      "predicted_count": 3,
+      "strict": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 1
+      },
+      "relaxed": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 1
+      },
+      "masking_exact": false,
+      "false_negatives": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "IMEI",
+          "category": "DIGITAL"
+        }
+      ],
+      "false_positives": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "DEVICE_ID",
+          "category": "DIGITAL",
+          "score": 0.916515138991168
+        }
+      ],
+      "expected": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "IMEI",
+          "category": "DIGITAL"
+        },
+        {
+          "start": 38,
+          "end": 49,
+          "subtype": "IP_ADDRESS",
+          "category": "DIGITAL"
+        },
+        {
+          "start": 64,
+          "end": 72,
+          "subtype": "USERNAME",
+          "category": "DIGITAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 7,
+          "end": 22,
+          "subtype": "DEVICE_ID",
+          "category": "DIGITAL",
+          "score": 0.916515138991168
+        },
+        {
+          "start": 38,
+          "end": 49,
+          "subtype": "IP_ADDRESS",
+          "category": "DIGITAL",
+          "score": 1
+        },
+        {
+          "start": 64,
+          "end": 72,
+          "subtype": "USERNAME",
+          "category": "DIGITAL",
+          "score": 1
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 8,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 10860,
+        "output_tokens": 907,
+        "attempts": 2,
+        "latency_ms": 785
+      }
+    },
+    {
+      "id": "repeated_person",
+      "repeat": 0,
+      "expected_count": 2,
+      "predicted_count": 2,
+      "strict": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 0,
+          "end": 8,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 0,
+          "end": 8,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY",
+          "score": 0.9273618495495703
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "subtype": "PERSON_NAME",
+          "category": "IDENTITY",
+          "score": 0.9486832980505138
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 11,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 14766,
+        "output_tokens": 1339,
+        "attempts": 2,
+        "latency_ms": 833
+      }
+    }
+  ]
+}

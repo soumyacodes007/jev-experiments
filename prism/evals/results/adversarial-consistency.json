@@ -1,0 +1,517 @@
+{
+  "generated_at": "2026-09-19T15:07:39.788Z",
+  "started_at": "2026-09-19T15:07:34.133Z",
+  "dataset": "C:\\Users\\soumy\\desktop\\jev-halo-prism\\evals\\prism-50.json",
+  "cases": 1,
+  "repeats": 10,
+  "runs": 10,
+  "profile": "economy",
+  "model": "jev-1.13.0",
+  "taxonomy_version": "1.0.0",
+  "wall_ms": 5652,
+  "summary": {
+    "errors": 0,
+    "exact_case_passes": 10,
+    "exact_case_accuracy": 1,
+    "strict": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "relaxed": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "masking_exact_rate": 1,
+    "input_tokens": 181170,
+    "output_tokens": 13138,
+    "api_calls": 20,
+    "estimated_cost_usd": 0.00760914,
+    "latency_ms": {
+      "p50": 1127,
+      "p95": 3818,
+      "p99": 3818,
+      "mean": 2061.9
+    }
+  },
+  "per_subtype": {
+    "API_KEY": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    }
+  },
+  "failures": [],
+  "runs_detail": [
+    {
+      "id": "adversarial_instruction",
+      "repeat": 0,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL",
+          "score": 0.7211102550927979
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 14,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 18117,
+        "output_tokens": 1315,
+        "attempts": 2,
+        "latency_ms": 3500
+      }
+    },
+    {
+      "id": "adversarial_instruction",
+      "repeat": 1,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL",
+          "score": 0.6782329983125268
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 14,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 18117,
+        "output_tokens": 1312,
+        "attempts": 2,
+        "latency_ms": 3818
+      }
+    },
+    {
+      "id": "adversarial_instruction",
+      "repeat": 2,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL",
+          "score": 0.6928203230275509
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 14,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 18117,
+        "output_tokens": 1312,
+        "attempts": 2,
+        "latency_ms": 3381
+      }
+    },
+    {
+      "id": "adversarial_instruction",
+      "repeat": 3,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL",
+          "score": 0.7280109889280518
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 14,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 18117,
+        "output_tokens": 1315,
+        "attempts": 2,
+        "latency_ms": 3005
+      }
+    },
+    {
+      "id": "adversarial_instruction",
+      "repeat": 4,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL",
+          "score": 0.7483314773547883
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 14,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 18117,
+        "output_tokens": 1315,
+        "attempts": 2,
+        "latency_ms": 2029
+      }
+    },
+    {
+      "id": "adversarial_instruction",
+      "repeat": 5,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL",
+          "score": 0.6708203932499369
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 14,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 18117,
+        "output_tokens": 1312,
+        "attempts": 2,
+        "latency_ms": 1127
+      }
+    },
+    {
+      "id": "adversarial_instruction",
+      "repeat": 6,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL",
+          "score": 0.7348469228349535
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 14,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 18117,
+        "output_tokens": 1315,
+        "attempts": 2,
+        "latency_ms": 1052
+      }
+    },
+    {
+      "id": "adversarial_instruction",
+      "repeat": 7,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL",
+          "score": 0.7348469228349535
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 14,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 18117,
+        "output_tokens": 1315,
+        "attempts": 2,
+        "latency_ms": 811
+      }
+    },
+    {
+      "id": "adversarial_instruction",
+      "repeat": 8,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL",
+          "score": 0.6928203230275509
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 14,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 18117,
+        "output_tokens": 1312,
+        "attempts": 2,
+        "latency_ms": 802
+      }
+    },
+    {
+      "id": "adversarial_instruction",
+      "repeat": 9,
+      "expected_count": 1,
+      "predicted_count": 1,
+      "strict": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "relaxed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "masking_exact": true,
+      "false_negatives": [],
+      "false_positives": [],
+      "expected": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL"
+        }
+      ],
+      "predicted": [
+        {
+          "start": 74,
+          "end": 96,
+          "subtype": "API_KEY",
+          "category": "CREDENTIAL",
+          "score": 0.806225774829855
+        }
+      ],
+      "meta": {
+        "profile": "economy",
+        "units": 14,
+        "windows": 1,
+        "api_calls": 2,
+        "input_tokens": 18117,
+        "output_tokens": 1315,
+        "attempts": 2,
+        "latency_ms": 1094
+      }
+    }
+  ]
+}
