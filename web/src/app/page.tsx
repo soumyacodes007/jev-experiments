@@ -66,6 +66,15 @@ const ABOUT: Record<Mode, string[]> = {
   ],
 };
 
+const HALO_CATEGORY_COLOR: Record<string, string> = {
+  PROMPT_INJECTION_JAILBREAK: "#f59e0b",
+  MALICIOUS_CODE_CYBERATTACK: "#ef4444",
+  SENSITIVE_INFORMATION_STEALING: "#8b5cf6",
+  DANGEROUS_OPERATIONS_TOOL_ABUSE: "#dc2626",
+  RESOURCE_ABUSE: "#3b82f6",
+  NONE: "#10b981",
+};
+
 const TIER_COLOR: Record<string, string> = {
   BLOCK: "bg-red-100 text-red-700",
   REQUIRE_APPROVAL: "bg-amber-100 text-amber-700",
@@ -243,8 +252,24 @@ function HaloChart({ result }: { result: HaloResult }) {
       </div>
 
       <div className="grid gap-3">
-        <Row label="Category" value={result.category ?? "—"} mono />
-        <Row label="Subcategory" value={result.subcategory ?? "—"} mono />
+        <div>
+          <p className="mb-1 text-[11px] text-muted-foreground">Category</p>
+          <p
+            className="font-mono text-base font-semibold leading-tight tracking-tight"
+            style={{ color: HALO_CATEGORY_COLOR[result.category ?? ""] ?? "#71717a" }}
+          >
+            {result.category ?? "—"}
+          </p>
+        </div>
+        <div>
+          <p className="mb-1 text-[11px] text-muted-foreground">Subcategory</p>
+          <p
+            className="font-mono text-lg font-bold leading-tight tracking-tight"
+            style={{ color: HALO_CATEGORY_COLOR[result.category ?? ""] ?? "#71717a" }}
+          >
+            {result.subcategory ?? "—"}
+          </p>
+        </div>
       </div>
 
       <div>
